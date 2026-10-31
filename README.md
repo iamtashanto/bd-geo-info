@@ -875,7 +875,7 @@ Bug reports and data corrections belong in [GitHub Issues](https://github.com/md
 
 ## 📄 License
 
-MIT © [Md Tanvir Ahamed Shanto](https://github.com/mdtanvirahamedshanto)
+MIT © [TA Shanto](https://github.com/mdtanvirahamedshanto)
 
 ---
 
@@ -886,7 +886,7 @@ MIT © [Md Tanvir Ahamed Shanto](https://github.com/mdtanvirahamedshanto)
 | Email | [mdtanvirahamedshanto@gmail.com](mailto:mdtanvirahamedshanto@gmail.com) |
 | GitHub | [@mdtanvirahamedshanto](https://github.com/mdtanvirahamedshanto) |
 | LinkedIn | [mdtanvirahamedshanto](https://linkedin.com/in/mdtanvirahamedshanto/) |
-| Portfolio | [mdtanvirahamedshanto.vercel.app](https://mdtanvirahamedshanto.vercel.app/) |
+| Portfolio | [tashanto.com](https://tashanto.com) |
 
 ---
 

@@ -67,6 +67,6 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 Feel free to contact the project maintainer:
 
 - GitHub: [@mdtanvirahamedshanto](https://github.com/mdtanvirahamedshanto)
-- Portfolio: [https://mdtanvirahamedshanto.vercel.app/](https://mdtanvirahamedshanto.vercel.app/)
+- Portfolio: [https://tashanto.com](https://tashanto.com)
 
 Thank you for your contributions!

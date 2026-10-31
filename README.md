@@ -885,7 +885,7 @@ Bug reports and data corrections belong in [GitHub Issues](https://github.com/ia
 
 ## 📄 License
 
-MIT © [TA Shanto](https://github.com/mdtanvirahamedshanto)
+MIT © [TA Shanto](https://github.com/iamtashanto)
 
 ---
 
@@ -893,9 +893,9 @@ MIT © [TA Shanto](https://github.com/mdtanvirahamedshanto)
 
 | | |
 |---|---|
-| Email | [mdtanvirahamedshanto@gmail.com](mailto:mdtanvirahamedshanto@gmail.com) |
-| GitHub | [@mdtanvirahamedshanto](https://github.com/mdtanvirahamedshanto) |
-| LinkedIn | [mdtanvirahamedshanto](https://linkedin.com/in/mdtanvirahamedshanto/) |
+| Email | [iamtashanto@gmail.com](mailto:iamtashanto@gmail.com) |
+| GitHub | [@iamtashanto](https://github.com/iamtashanto) |
+| LinkedIn | [iamtashanto](https://linkedin.com/in/iamtashanto/) |
 | Portfolio | [tashanto.com](https://tashanto.com) |
 
 ---

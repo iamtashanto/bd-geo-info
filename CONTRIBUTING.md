@@ -4,7 +4,7 @@ First off, thank you for considering contributing to bd-geo-info! It's people li
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to [mdtanvirahamedshanto](https://github.com/mdtanvirahamedshanto).
+This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to [iamtashanto](https://github.com/iamtashanto).
 
 ## How Can I Contribute?
 
@@ -66,7 +66,7 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 
 Feel free to contact the project maintainer:
 
-- GitHub: [@mdtanvirahamedshanto](https://github.com/mdtanvirahamedshanto)
+- GitHub: [@iamtashanto](https://github.com/iamtashanto)
 - Portfolio: [https://tashanto.com](https://tashanto.com)
 
 Thank you for your contributions!

@@ -17,6 +17,7 @@
       "types": "./dist/react/types/react/index.d.ts"
     }
   },
+  "homepage": "https://bdgeoinfo.tashanto.com/",
   "files": [
     "dist/"
   ],
@@ -63,19 +64,14 @@
   "bugs": {
     "url": "https://github.com/iamtashanto/bd-geo-info/issues"
   },
-  "homepage": "https://bdgeoinfo.tashanto.com",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
   "peerDependenciesMeta": {
-    "react": {
-      "optional": true
-    },
-    "react-dom": {
-      "optional": true
-    }
+    "react": { "optional": true },
+    "react-dom": { "optional": true }
   },
   "devDependencies": {
     "@swc/core": "^1.10.18",

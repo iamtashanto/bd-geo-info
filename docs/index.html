@@ -260,26 +260,26 @@
 
 <span class="tc">// All divisions (8 divisions of Bangladesh)</span>
 <span class="tk">const</span> divisions = <span class="tk">await</span> getDivisions(<span class="ts">'en'</span>);
-<span class="tc">// [{ value: '1', label: 'Chittagong' }, { value: '3', label: 'Dhaka' }, ...]</span>
+<span class="tc">// [{ value: '1', label: 'Barisal' }, { value: '2', label: 'Chattagram' }, ...]</span>
 
 <span class="tc">// Districts for a division</span>
 <span class="tk">const</span> districts = <span class="tk">await</span> getDistricts(<span class="ts">'3'</span>, <span class="ts">'en'</span>);
 
 <span class="tc">// Upazilas for a district</span>
-<span class="tk">const</span> upazilas = <span class="tk">await</span> getUpazilas(<span class="ts">'17'</span>, <span class="ts">'en'</span>);
+<span class="tk">const</span> upazilas = <span class="tk">await</span> getUpazilas(<span class="ts">'47'</span>, <span class="ts">'en'</span>);
 
 <span class="tc">// Unions for an upazila</span>
-<span class="tk">const</span> unions = <span class="tk">await</span> getUnions(<span class="ts">'101'</span>, <span class="ts">'en'</span>);
+<span class="tk">const</span> unions = <span class="tk">await</span> getUnions(<span class="ts">'365'</span>, <span class="ts">'en'</span>);
 
 <span class="tc">// বাংলা output — just change the language param</span>
 <span class="tk">const</span> divisionsBn = <span class="tk">await</span> getDivisions(<span class="ts">'bn'</span>);
-<span class="tc">// [{ value: '1', label: 'চট্টগ্রাম' }, ...]</span></code></pre>
+<span class="tc">// [{ value: '1', label: 'বরিশাল' }, ...]</span></code></pre>
       <button class="copy-btn absolute top-12 right-4 text-slate-500 hover:text-accent transition-colors bg-surface border border-rim rounded-lg p-2" data-copy="import { getDivisions, getDistricts, getUpazilas, getUnions } from 'bd-geo-info';
 
 const divisions = await getDivisions('en');
 const districts = await getDistricts('3', 'en');
-const upazilas  = await getUpazilas('17', 'en');
-const unions    = await getUnions('101', 'en');"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+const upazilas  = await getUpazilas('47', 'en');
+const unions    = await getUnions('365', 'en');"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
     </div>
   </div>
 </section>
@@ -304,9 +304,9 @@ const unions    = await getUnions('101', 'en');"><svg class="w-4 h-4" fill="none
         <p class="text-sm text-slate-400 mb-4">Returns all 8 divisions of Bangladesh. Defaults to English.</p>
         <div class="relative bg-code border border-rim rounded-lg overflow-hidden">
           <pre class="font-mono text-sm p-4 overflow-x-auto leading-relaxed text-slate-300"><code><span class="tk">const</span> divisions = <span class="tk">await</span> getDivisions(<span class="ts">'en'</span>);
-<span class="tc">// [{ value: '1', label: 'Chittagong' }, { value: '3', label: 'Dhaka' }, ...]</span>
+<span class="tc">// [{ value: '1', label: 'Barisal' }, { value: '2', label: 'Chattagram' }, ...]</span>
 <span class="tk">const</span> divisionsBn = <span class="tk">await</span> getDivisions(<span class="ts">'bn'</span>);
-<span class="tc">// [{ value: '1', label: 'চট্টগ্রাম' }, ...]</span></code></pre>
+<span class="tc">// [{ value: '1', label: 'বরিশাল' }, ...]</span></code></pre>
         </div>
       </div>
 
@@ -320,7 +320,7 @@ const unions    = await getUnions('101', 'en');"><svg class="w-4 h-4" fill="none
         <p class="text-sm text-slate-400 mb-4">Returns all districts belonging to a division.</p>
         <div class="relative bg-code border border-rim rounded-lg overflow-hidden">
           <pre class="font-mono text-sm p-4 overflow-x-auto leading-relaxed text-slate-300"><code><span class="tk">const</span> districts = <span class="tk">await</span> getDistricts(<span class="ts">'3'</span>, <span class="ts">'en'</span>);
-<span class="tc">// [{ value: '17', label: 'Dhaka' }, { value: '26', label: 'Gazipur' }, ...]</span></code></pre>
+<span class="tc">// [{ value: '47', label: 'Dhaka' }, { value: '41', label: 'Gazipur' }, ...]</span></code></pre>
         </div>
       </div>
 
@@ -333,8 +333,8 @@ const unions    = await getUnions('101', 'en');"><svg class="w-4 h-4" fill="none
         <div class="font-mono text-xs text-slate-300 bg-code border border-rim px-3 py-2 rounded-lg mb-3 overflow-x-auto">getUpazilas(districtId: string, language?: 'en' | 'bn'): Promise&lt;(Upazila &amp; &#123; value: string; label: string &#125;)[]&gt;</div>
         <p class="text-sm text-slate-400 mb-4">Returns all upazilas for a district. Includes full data fields alongside <code class="font-mono text-sky-300 text-xs bg-ink-3 px-1 rounded">value</code> / <code class="font-mono text-sky-300 text-xs bg-ink-3 px-1 rounded">label</code>.</p>
         <div class="relative bg-code border border-rim rounded-lg overflow-hidden">
-          <pre class="font-mono text-sm p-4 overflow-x-auto leading-relaxed text-slate-300"><code><span class="tk">const</span> upazilas = <span class="tk">await</span> getUpazilas(<span class="ts">'17'</span>, <span class="ts">'en'</span>);
-<span class="tc">// [{ id: '101', district_id: '17', name: 'Mirpur', value: '101', label: 'Mirpur' }, ...]</span></code></pre>
+          <pre class="font-mono text-sm p-4 overflow-x-auto leading-relaxed text-slate-300"><code><span class="tk">const</span> upazilas = <span class="tk">await</span> getUpazilas(<span class="ts">'47'</span>, <span class="ts">'en'</span>);
+<span class="tc">// [{ id: '530', district_id: '47', name: 'Mirpur', value: '530', label: 'Mirpur' }, ...]</span></code></pre>
         </div>
       </div>
 
@@ -347,8 +347,8 @@ const unions    = await getUnions('101', 'en');"><svg class="w-4 h-4" fill="none
         <div class="font-mono text-xs text-slate-300 bg-code border border-rim px-3 py-2 rounded-lg mb-3 overflow-x-auto">getUnions(upazilaId: string, language?: 'en' | 'bn'): Promise&lt;&#123; value: string; label: string; url?: string &#125;[]&gt;</div>
         <p class="text-sm text-slate-400 mb-4">Returns all unions for an upazila.</p>
         <div class="relative bg-code border border-rim rounded-lg overflow-hidden">
-          <pre class="font-mono text-sm p-4 overflow-x-auto leading-relaxed text-slate-300"><code><span class="tk">const</span> unions = <span class="tk">await</span> getUnions(<span class="ts">'101'</span>, <span class="ts">'en'</span>);
-<span class="tc">// [{ value: '1001', label: 'Pallabi', url: '' }, ...]</span></code></pre>
+          <pre class="font-mono text-sm p-4 overflow-x-auto leading-relaxed text-slate-300"><code><span class="tk">const</span> unions = <span class="tk">await</span> getUnions(<span class="ts">'365'</span>, <span class="ts">'en'</span>);
+<span class="tc">// [{ value: '3272', label: 'Birulia', url: 'birulia.dhaka.gov.bd' }, ...]</span></code></pre>
         </div>
       </div>
 
@@ -361,8 +361,8 @@ const unions    = await getUnions('101', 'en');"><svg class="w-4 h-4" fill="none
         <div class="font-mono text-xs text-slate-300 bg-code border border-rim px-3 py-2 rounded-lg mb-3 overflow-x-auto">getPostCode(params: &#123; division?: string; district?: string; upazila?: string &#125; | null): PostCode[]</div>
         <p class="text-sm text-slate-400 mb-4">Synchronous postcode lookup. Useful inline without <code class="font-mono text-sky-300 text-xs bg-ink-3 px-1 rounded">await</code>.</p>
         <div class="relative bg-code border border-rim rounded-lg overflow-hidden">
-          <pre class="font-mono text-sm p-4 overflow-x-auto leading-relaxed text-slate-300"><code><span class="tk">const</span> codes = getPostCode(&#123; district: <span class="ts">'17'</span>, upazila: <span class="ts">'Mirpur'</span> &#125;);
-<span class="tc">// [{ postCode: '1216', postOffice: 'Pallabi', upazila: 'Mirpur', ... }]</span></code></pre>
+          <pre class="font-mono text-sm p-4 overflow-x-auto leading-relaxed text-slate-300"><code><span class="tk">const</span> codes = getPostCode(&#123; district: <span class="ts">'47'</span>, upazila: <span class="ts">'Mirpur'</span> &#125;);
+<span class="tc">// [{ postCode: '1216', postOffice: 'Mirpur TSO', upazila: 'Mirpur', ... }]</span></code></pre>
         </div>
       </div>
 
@@ -375,8 +375,8 @@ const unions    = await getUnions('101', 'en');"><svg class="w-4 h-4" fill="none
         <div class="font-mono text-xs text-slate-300 bg-code border border-rim px-3 py-2 rounded-lg mb-3 overflow-x-auto">formatAddress(division, district, upazila, union, postCode, street, language?): Promise&lt;string&gt;</div>
         <p class="text-sm text-slate-400 mb-4">Resolves IDs to names and returns a human-readable formatted address string.</p>
         <div class="relative bg-code border border-rim rounded-lg overflow-hidden">
-          <pre class="font-mono text-sm p-4 overflow-x-auto leading-relaxed text-slate-300"><code><span class="tk">const</span> addr = <span class="tk">await</span> formatAddress(<span class="ts">'3'</span>, <span class="ts">'17'</span>, <span class="ts">'101'</span>, <span class="ts">'1001'</span>, <span class="ts">'1216'</span>, <span class="ts">'House 5'</span>, <span class="ts">'en'</span>);
-<span class="tc">// "House 5, Pallabi, Mirpur, Dhaka-1216, Dhaka"</span></code></pre>
+          <pre class="font-mono text-sm p-4 overflow-x-auto leading-relaxed text-slate-300"><code><span class="tk">const</span> addr = <span class="tk">await</span> formatAddress(<span class="ts">'3'</span>, <span class="ts">'47'</span>, <span class="ts">'365'</span>, <span class="ts">'3272'</span>, <span class="ts">'1340'</span>, <span class="ts">'House 5'</span>, <span class="ts">'en'</span>);
+<span class="tc">// "House 5, Birulia, Savar, Dhaka-1340, Dhaka"</span></code></pre>
         </div>
       </div>
 
@@ -424,9 +424,9 @@ validatePostCode(<span class="ts">'abcd'</span>); <span class="tc">// false</spa
 
 <span class="tk">const</span> divisions = <span class="tk">await</span> getDivisions(<span class="ts">'en'</span>);
 <span class="tk">const</span> districts = <span class="tk">await</span> getDistricts(<span class="ts">'3'</span>, <span class="ts">'en'</span>);
-<span class="tk">const</span> upazilas  = <span class="tk">await</span> getUpazilas(<span class="ts">'17'</span>, <span class="ts">'en'</span>);
-<span class="tk">const</span> unions    = <span class="tk">await</span> getUnions(<span class="ts">'101'</span>, <span class="ts">'en'</span>);
-<span class="tk">const</span> codes     = getPostCode({ district: <span class="ts">'17'</span>, upazila: <span class="ts">'Mirpur'</span> });</code></pre>
+<span class="tk">const</span> upazilas  = <span class="tk">await</span> getUpazilas(<span class="ts">'47'</span>, <span class="ts">'en'</span>);
+<span class="tk">const</span> unions    = <span class="tk">await</span> getUnions(<span class="ts">'365'</span>, <span class="ts">'en'</span>);
+<span class="tk">const</span> codes     = getPostCode({ district: <span class="ts">'47'</span>, upazila: <span class="ts">'Mirpur'</span> });</code></pre>
       </div>
 
       <div id="t-react" class="tab-panel hidden">

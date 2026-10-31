@@ -118,6 +118,13 @@
             "name": "Lalmai",
             "bn_name": "লালমাই",
             "url": "lalmai.comilla.gov.bd"
+        },
+        {
+            "id": "500",
+            "district_id": "1",
+            "name": "Bangra",
+            "bn_name": "বাঙ্গরা",
+            "url": ""
         }
     ],
     "2": [
@@ -573,6 +580,118 @@
             "name": "Karnafuli",
             "bn_name": "কর্ণফুলী",
             "url": "karnafuli.chittagong.gov.bd"
+        },
+        {
+            "id": "501",
+            "district_id": "8",
+            "name": "Fatikchhari North",
+            "bn_name": "ফটিকছড়ি উত্তর",
+            "url": ""
+        },
+        {
+            "id": "554",
+            "district_id": "8",
+            "name": "Akbar Shah",
+            "bn_name": "আকবর শাহ",
+            "url": ""
+        },
+        {
+            "id": "555",
+            "district_id": "8",
+            "name": "Bakalia",
+            "bn_name": "বাকলিয়া",
+            "url": ""
+        },
+        {
+            "id": "556",
+            "district_id": "8",
+            "name": "Bandar",
+            "bn_name": "বন্দর",
+            "url": ""
+        },
+        {
+            "id": "557",
+            "district_id": "8",
+            "name": "Bayazid Bostami",
+            "bn_name": "বায়োজিদ বোস্তামী",
+            "url": ""
+        },
+        {
+            "id": "558",
+            "district_id": "8",
+            "name": "Chandgaon",
+            "bn_name": "চান্দগাঁও",
+            "url": ""
+        },
+        {
+            "id": "559",
+            "district_id": "8",
+            "name": "Chawkbazar",
+            "bn_name": "চকবাজার",
+            "url": ""
+        },
+        {
+            "id": "560",
+            "district_id": "8",
+            "name": "Double Mooring",
+            "bn_name": "ডবল মুরিং",
+            "url": ""
+        },
+        {
+            "id": "561",
+            "district_id": "8",
+            "name": "EPZ",
+            "bn_name": "ইপিজেড",
+            "url": ""
+        },
+        {
+            "id": "562",
+            "district_id": "8",
+            "name": "Halishahar",
+            "bn_name": "হালিশহর",
+            "url": ""
+        },
+        {
+            "id": "563",
+            "district_id": "8",
+            "name": "Khulshi",
+            "bn_name": "খুলশী",
+            "url": ""
+        },
+        {
+            "id": "564",
+            "district_id": "8",
+            "name": "Kotwali",
+            "bn_name": "কোতোয়ালী",
+            "url": ""
+        },
+        {
+            "id": "565",
+            "district_id": "8",
+            "name": "Pahartali",
+            "bn_name": "পাহাড়তলী",
+            "url": ""
+        },
+        {
+            "id": "566",
+            "district_id": "8",
+            "name": "Panchlaish",
+            "bn_name": "পাঁচলাইশ",
+            "url": ""
+        },
+        {
+            "id": "567",
+            "district_id": "8",
+            "name": "Patenga",
+            "bn_name": "পতেঙ্গা",
+            "url": ""
+        },
+        {
+            "id": "568",
+            "district_id": "8",
+            "name": "Sadarghat",
+            "bn_name": "সদরঘাট",
+            "url": ""
         }
     ],
     "9": [
@@ -1049,6 +1168,83 @@
             "name": "Bagmara",
             "bn_name": "বাগমারা",
             "url": "bagmara.rajshahi.gov.bd"
+        },
+        {
+            "id": "569",
+            "district_id": "15",
+            "name": "Airport",
+            "bn_name": "বিমানবন্দর",
+            "url": ""
+        },
+        {
+            "id": "570",
+            "district_id": "15",
+            "name": "Belpukur",
+            "bn_name": "বেলপুকুর",
+            "url": ""
+        },
+        {
+            "id": "571",
+            "district_id": "15",
+            "name": "Boalia",
+            "bn_name": "বোয়ালিয়া",
+            "url": ""
+        },
+        {
+            "id": "572",
+            "district_id": "15",
+            "name": "Chandrima",
+            "bn_name": "চন্দ্রিমা",
+            "url": ""
+        },
+        {
+            "id": "573",
+            "district_id": "15",
+            "name": "Damkura",
+            "bn_name": "দামকুড়া",
+            "url": ""
+        },
+        {
+            "id": "574",
+            "district_id": "15",
+            "name": "Karnahar",
+            "bn_name": "কর্ণহার",
+            "url": ""
+        },
+        {
+            "id": "575",
+            "district_id": "15",
+            "name": "Kashiadanga",
+            "bn_name": "কাশিয়াডাঙ্গা",
+            "url": ""
+        },
+        {
+            "id": "576",
+            "district_id": "15",
+            "name": "Katakhali",
+            "bn_name": "কাটাখালী",
+            "url": ""
+        },
+        {
+            "id": "577",
+            "district_id": "15",
+            "name": "Motihar",
+            "bn_name": "মতিহার",
+            "url": ""
+        },
+        {
+            "id": "578",
+            "district_id": "15",
+            "name": "Rajpara",
+            "bn_name": "রাজপাড়া",
+            "url": ""
+        },
+        {
+            "id": "579",
+            "district_id": "15",
+            "name": "Shah Makhdum",
+            "bn_name": "শাহ মখদুম",
+            "url": ""
         }
     ],
     "16": [
@@ -1577,6 +1773,62 @@
             "name": "Koyra",
             "bn_name": "কয়রা",
             "url": "koyra.khulna.gov.bd"
+        },
+        {
+            "id": "580",
+            "district_id": "27",
+            "name": "Aranghata",
+            "bn_name": "আড়ংঘাটা",
+            "url": ""
+        },
+        {
+            "id": "581",
+            "district_id": "27",
+            "name": "Daulatpur",
+            "bn_name": "দৌলতপুর",
+            "url": ""
+        },
+        {
+            "id": "582",
+            "district_id": "27",
+            "name": "Harintana",
+            "bn_name": "হরিণটানা",
+            "url": ""
+        },
+        {
+            "id": "583",
+            "district_id": "27",
+            "name": "Khalishpur",
+            "bn_name": "খালিশপুর",
+            "url": ""
+        },
+        {
+            "id": "584",
+            "district_id": "27",
+            "name": "Khan Jahan Ali",
+            "bn_name": "খানজাহান আলী",
+            "url": ""
+        },
+        {
+            "id": "585",
+            "district_id": "27",
+            "name": "Khulna Sadar",
+            "bn_name": "খুলনা সদর",
+            "url": ""
+        },
+        {
+            "id": "586",
+            "district_id": "27",
+            "name": "Labanchara",
+            "bn_name": "লবণচরা",
+            "url": ""
+        },
+        {
+            "id": "587",
+            "district_id": "27",
+            "name": "Sonadanga",
+            "bn_name": "সোনাডাঙ্গা",
+            "url": ""
         }
     ],
     "28": [
@@ -1897,6 +2149,27 @@
             "name": "Hizla",
             "bn_name": "হিজলা",
             "url": "hizla.barisal.gov.bd"
+        },
+        {
+            "id": "608",
+            "district_id": "33",
+            "name": "Airport",
+            "bn_name": "বিমানবন্দর",
+            "url": ""
+        },
+        {
+            "id": "609",
+            "district_id": "33",
+            "name": "Bandar",
+            "bn_name": "বন্দর",
+            "url": ""
+        },
+        {
+            "id": "610",
+            "district_id": "33",
+            "name": "Kawnia",
+            "bn_name": "কাউনিয়া",
+            "url": ""
         }
     ],
     "34": [
@@ -2085,6 +2358,41 @@
             "name": "Osmaninagar",
             "bn_name": "ওসমানী নগর",
             "url": "osmaninagar.sylhet.gov.bd"
+        },
+        {
+            "id": "588",
+            "district_id": "36",
+            "name": "Airport",
+            "bn_name": "বিমানবন্দর",
+            "url": ""
+        },
+        {
+            "id": "589",
+            "district_id": "36",
+            "name": "Jalalabad",
+            "bn_name": "জালালাবাদ",
+            "url": ""
+        },
+        {
+            "id": "590",
+            "district_id": "36",
+            "name": "Kotwali",
+            "bn_name": "কোতোয়ালী",
+            "url": ""
+        },
+        {
+            "id": "591",
+            "district_id": "36",
+            "name": "Moglabazar",
+            "bn_name": "মোগলাবাজার",
+            "url": ""
+        },
+        {
+            "id": "592",
+            "district_id": "36",
+            "name": "Shah Paran",
+            "bn_name": "শাহপরাণ",
+            "url": ""
         }
     ],
     "37": [
@@ -2194,6 +2502,13 @@
             "name": "Madhabpur",
             "bn_name": "মাধবপুর",
             "url": "madhabpur.habiganj.gov.bd"
+        },
+        {
+            "id": "502",
+            "district_id": "38",
+            "name": "Shayestaganj",
+            "bn_name": "শায়েস্তাগঞ্জ",
+            "url": ""
         }
     ],
     "39": [
@@ -2361,6 +2676,55 @@
             "name": "Sreepur",
             "bn_name": "শ্রীপুর",
             "url": "sreepur.gazipur.gov.bd"
+        },
+        {
+            "id": "599",
+            "district_id": "41",
+            "name": "Bason",
+            "bn_name": "বাসন",
+            "url": ""
+        },
+        {
+            "id": "600",
+            "district_id": "41",
+            "name": "Gacha",
+            "bn_name": "গাছা",
+            "url": ""
+        },
+        {
+            "id": "601",
+            "district_id": "41",
+            "name": "Kashimpur",
+            "bn_name": "কাশিমপুর",
+            "url": ""
+        },
+        {
+            "id": "602",
+            "district_id": "41",
+            "name": "Konabari",
+            "bn_name": "কোনাবাড়ী",
+            "url": ""
+        },
+        {
+            "id": "603",
+            "district_id": "41",
+            "name": "Pubail",
+            "bn_name": "পুবাইল",
+            "url": ""
+        },
+        {
+            "id": "604",
+            "district_id": "41",
+            "name": "Tongi East",
+            "bn_name": "টঙ্গী পূর্ব",
+            "url": ""
+        },
+        {
+            "id": "605",
+            "district_id": "41",
+            "name": "Tongi West",
+            "bn_name": "টঙ্গী পশ্চিম",
+            "url": ""
         }
     ],
     "42": [
@@ -2442,6 +2806,20 @@
             "name": "Sonargaon",
             "bn_name": "সোনারগাঁ",
             "url": "sonargaon.narayanganj.gov.bd"
+        },
+        {
+            "id": "606",
+            "district_id": "43",
+            "name": "Fatullah",
+            "bn_name": "ফতুল্লা",
+            "url": ""
+        },
+        {
+            "id": "607",
+            "district_id": "43",
+            "name": "Siddhirganj",
+            "bn_name": "সিদ্ধিরগঞ্জ",
+            "url": ""
         }
     ],
     "44": [
@@ -2709,6 +3087,356 @@
             "name": "Dohar",
             "bn_name": "দোহার",
             "url": "dohar.dhaka.gov.bd"
+        },
+        {
+            "id": "504",
+            "district_id": "47",
+            "name": "Adabor",
+            "bn_name": "আদাবর",
+            "url": ""
+        },
+        {
+            "id": "505",
+            "district_id": "47",
+            "name": "Airport",
+            "bn_name": "বিমানবন্দর",
+            "url": ""
+        },
+        {
+            "id": "506",
+            "district_id": "47",
+            "name": "Badda",
+            "bn_name": "বাড্ডা",
+            "url": ""
+        },
+        {
+            "id": "507",
+            "district_id": "47",
+            "name": "Banani",
+            "bn_name": "বনানী",
+            "url": ""
+        },
+        {
+            "id": "508",
+            "district_id": "47",
+            "name": "Bangshal",
+            "bn_name": "বংশাল",
+            "url": ""
+        },
+        {
+            "id": "509",
+            "district_id": "47",
+            "name": "Bhashantek",
+            "bn_name": "ভাষানটেক",
+            "url": ""
+        },
+        {
+            "id": "510",
+            "district_id": "47",
+            "name": "Bhatara",
+            "bn_name": "ভাটারা",
+            "url": ""
+        },
+        {
+            "id": "511",
+            "district_id": "47",
+            "name": "Cantonment",
+            "bn_name": "ক্যান্টনমেন্ট",
+            "url": ""
+        },
+        {
+            "id": "512",
+            "district_id": "47",
+            "name": "Chawkbazar",
+            "bn_name": "চকবাজার",
+            "url": ""
+        },
+        {
+            "id": "513",
+            "district_id": "47",
+            "name": "Dakshinkhan",
+            "bn_name": "দক্ষিণখান",
+            "url": ""
+        },
+        {
+            "id": "514",
+            "district_id": "47",
+            "name": "Darus Salam",
+            "bn_name": "দারুস সালাম",
+            "url": ""
+        },
+        {
+            "id": "515",
+            "district_id": "47",
+            "name": "Demra",
+            "bn_name": "ডেমরা",
+            "url": ""
+        },
+        {
+            "id": "516",
+            "district_id": "47",
+            "name": "Dhanmondi",
+            "bn_name": "ধানমন্ডি",
+            "url": ""
+        },
+        {
+            "id": "517",
+            "district_id": "47",
+            "name": "Gandaria",
+            "bn_name": "গেন্ডারিয়া",
+            "url": ""
+        },
+        {
+            "id": "518",
+            "district_id": "47",
+            "name": "Gulshan",
+            "bn_name": "গুলশান",
+            "url": ""
+        },
+        {
+            "id": "519",
+            "district_id": "47",
+            "name": "Hatirjheel",
+            "bn_name": "হাতিরঝিল",
+            "url": ""
+        },
+        {
+            "id": "520",
+            "district_id": "47",
+            "name": "Hazaribagh",
+            "bn_name": "হাজারীবাগ",
+            "url": ""
+        },
+        {
+            "id": "521",
+            "district_id": "47",
+            "name": "Jatrabari",
+            "bn_name": "যাত্রাবাড়ী",
+            "url": ""
+        },
+        {
+            "id": "522",
+            "district_id": "47",
+            "name": "Kadamtali",
+            "bn_name": "কদমতলী",
+            "url": ""
+        },
+        {
+            "id": "523",
+            "district_id": "47",
+            "name": "Kafrul",
+            "bn_name": "কাফরুল",
+            "url": ""
+        },
+        {
+            "id": "524",
+            "district_id": "47",
+            "name": "Kalabagan",
+            "bn_name": "কলাবাগান",
+            "url": ""
+        },
+        {
+            "id": "525",
+            "district_id": "47",
+            "name": "Kamrangirchar",
+            "bn_name": "কামরাঙ্গীরচর",
+            "url": ""
+        },
+        {
+            "id": "526",
+            "district_id": "47",
+            "name": "Khilgaon",
+            "bn_name": "খিলগাঁও",
+            "url": ""
+        },
+        {
+            "id": "527",
+            "district_id": "47",
+            "name": "Khilkhet",
+            "bn_name": "খিলক্ষেত",
+            "url": ""
+        },
+        {
+            "id": "528",
+            "district_id": "47",
+            "name": "Kotwali",
+            "bn_name": "কোতোয়ালী",
+            "url": ""
+        },
+        {
+            "id": "529",
+            "district_id": "47",
+            "name": "Lalbagh",
+            "bn_name": "লালবাগ",
+            "url": ""
+        },
+        {
+            "id": "530",
+            "district_id": "47",
+            "name": "Mirpur",
+            "bn_name": "মিরপুর",
+            "url": ""
+        },
+        {
+            "id": "531",
+            "district_id": "47",
+            "name": "Mohammadpur",
+            "bn_name": "মোহাম্মদপুর",
+            "url": ""
+        },
+        {
+            "id": "532",
+            "district_id": "47",
+            "name": "Motijheel",
+            "bn_name": "মতিঝিল",
+            "url": ""
+        },
+        {
+            "id": "533",
+            "district_id": "47",
+            "name": "Mugda",
+            "bn_name": "মুগদা",
+            "url": ""
+        },
+        {
+            "id": "534",
+            "district_id": "47",
+            "name": "New Market",
+            "bn_name": "নিউ মার্কেট",
+            "url": ""
+        },
+        {
+            "id": "535",
+            "district_id": "47",
+            "name": "Pallabi",
+            "bn_name": "পল্লবী",
+            "url": ""
+        },
+        {
+            "id": "536",
+            "district_id": "47",
+            "name": "Paltan",
+            "bn_name": "পল্টন",
+            "url": ""
+        },
+        {
+            "id": "537",
+            "district_id": "47",
+            "name": "Ramna",
+            "bn_name": "রমনা",
+            "url": ""
+        },
+        {
+            "id": "538",
+            "district_id": "47",
+            "name": "Rampura",
+            "bn_name": "রামপুরা",
+            "url": ""
+        },
+        {
+            "id": "539",
+            "district_id": "47",
+            "name": "Rupnagar",
+            "bn_name": "রূপনগর",
+            "url": ""
+        },
+        {
+            "id": "540",
+            "district_id": "47",
+            "name": "Sabujbagh",
+            "bn_name": "সবুজবাগ",
+            "url": ""
+        },
+        {
+            "id": "541",
+            "district_id": "47",
+            "name": "Shah Ali",
+            "bn_name": "শাহ আলী",
+            "url": ""
+        },
+        {
+            "id": "542",
+            "district_id": "47",
+            "name": "Shahbagh",
+            "bn_name": "শাহবাগ",
+            "url": ""
+        },
+        {
+            "id": "543",
+            "district_id": "47",
+            "name": "Shahjahanpur",
+            "bn_name": "শাহজাহানপুর",
+            "url": ""
+        },
+        {
+            "id": "544",
+            "district_id": "47",
+            "name": "Sher-e-Bangla Nagar",
+            "bn_name": "শেরেবাংলা নগর",
+            "url": ""
+        },
+        {
+            "id": "545",
+            "district_id": "47",
+            "name": "Shyampur",
+            "bn_name": "শ্যামপুর",
+            "url": ""
+        },
+        {
+            "id": "546",
+            "district_id": "47",
+            "name": "Sutrapur",
+            "bn_name": "সূত্রাপুর",
+            "url": ""
+        },
+        {
+            "id": "547",
+            "district_id": "47",
+            "name": "Tejgaon",
+            "bn_name": "তেজগাঁও",
+            "url": ""
+        },
+        {
+            "id": "548",
+            "district_id": "47",
+            "name": "Tejgaon Industrial Area",
+            "bn_name": "তেজগাঁও শিল্পাঞ্চল",
+            "url": ""
+        },
+        {
+            "id": "549",
+            "district_id": "47",
+            "name": "Turag",
+            "bn_name": "তুরাগ",
+            "url": ""
+        },
+        {
+            "id": "550",
+            "district_id": "47",
+            "name": "Uttar Khan",
+            "bn_name": "উত্তরখান",
+            "url": ""
+        },
+        {
+            "id": "551",
+            "district_id": "47",
+            "name": "Uttara East",
+            "bn_name": "উত্তরা পূর্ব",
+            "url": ""
+        },
+        {
+            "id": "552",
+            "district_id": "47",
+            "name": "Uttara West",
+            "bn_name": "উত্তরা পশ্চিম",
+            "url": ""
+        },
+        {
+            "id": "553",
+            "district_id": "47",
+            "name": "Wari",
+            "bn_name": "ওয়ারী",
+            "url": ""
         }
     ],
     "48": [
@@ -3300,6 +4028,48 @@
             "name": "Pirgacha",
             "bn_name": "পীরগাছা",
             "url": "pirgacha.rangpur.gov.bd"
+        },
+        {
+            "id": "593",
+            "district_id": "59",
+            "name": "Haragach",
+            "bn_name": "হারাগাছ",
+            "url": ""
+        },
+        {
+            "id": "594",
+            "district_id": "59",
+            "name": "Hazirhat",
+            "bn_name": "হাজিরহাট",
+            "url": ""
+        },
+        {
+            "id": "595",
+            "district_id": "59",
+            "name": "Kotwali",
+            "bn_name": "কোতোয়ালী",
+            "url": ""
+        },
+        {
+            "id": "596",
+            "district_id": "59",
+            "name": "Mahiganj",
+            "bn_name": "মাহিগঞ্জ",
+            "url": ""
+        },
+        {
+            "id": "597",
+            "district_id": "59",
+            "name": "Parshuram",
+            "bn_name": "পরশুরাম",
+            "url": ""
+        },
+        {
+            "id": "598",
+            "district_id": "59",
+            "name": "Tazhat",
+            "bn_name": "তাজহাট",
+            "url": ""
         }
     ],
     "60": [
@@ -3495,6 +4265,13 @@
             "name": "Tarakanda",
             "bn_name": "তারাকান্দা",
             "url": "tarakanda.mymensingh.gov.bd"
+        },
+        {
+            "id": "503",
+            "district_id": "62",
+            "name": "South Gafargaon",
+            "bn_name": "দক্ষিণ গফরগাঁও",
+            "url": ""
         }
     ],
     "63": [

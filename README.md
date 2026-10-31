@@ -24,6 +24,10 @@ Divisions · Districts · Upazilas · Unions · Postcodes — bilingual (EN / �
 
 React UI components are available as an opt-in subpath (`bd-geo-info/react`) so non-React projects never pay the cost of pulling in React.
 
+**Coverage:** 8 divisions · 64 districts · 610 upazila/thana entries (including 107 metropolitan thanas) · 4,540 unions · 1,324 postcodes.
+
+Metropolitan thanas (Dhaka, Chattogram, Rajshahi, Khulna, Sylhet, Rangpur, Gazipur, Narayanganj and Barishal city corporations) are included as thana-level entries. They do not have a rural `union` list.
+
 ### Why bd-geo-info?
 
 - **Zero required dependencies** — React is optional, not forced
@@ -68,23 +72,23 @@ import { getDivisions, getDistricts, getUpazilas, getUnions } from 'bd-geo-info'
 
 // 1. All divisions
 const divisions = await getDivisions('en');
-// [{ value: '1', label: 'Chittagong' }, { value: '2', label: 'Rajshahi' }, ...]
+// [{ value: '1', label: 'Barisal' }, { value: '2', label: 'Chattagram' }, ...]
 
 // 2. Districts for a division
 const districts = await getDistricts('3', 'en');
-// [{ value: '17', label: 'Dhaka' }, ...]
+// [{ value: '47', label: 'Dhaka' }, { value: '41', label: 'Gazipur' }, ...]
 
-// 3. Upazilas for a district
-const upazilas = await getUpazilas('17', 'en');
-// [{ value: '101', label: 'Mirpur', id: '101', district_id: '17', ... }, ...]
+// 3. Upazilas / thanas for a district
+const upazilas = await getUpazilas('47', 'en');
+// [{ value: '530', label: 'Mirpur', id: '530', district_id: '47', ... }, ...]
 
 // 4. Unions for an upazila
-const unions = await getUnions('101', 'en');
-// [{ value: '1001', label: 'Pallabi' }, ...]
+const unions = await getUnions('365', 'en');
+// [{ value: '3272', label: 'Birulia' }, ...]
 
 // 5. Bangla output
 const divisionsBn = await getDivisions('bn');
-// [{ value: '1', label: 'চট্টগ্রাম' }, ...]
+// [{ value: '1', label: 'বরিশাল' }, ...]
 ```
 
 
@@ -111,10 +115,10 @@ getDivisions(language?: 'en' | 'bn'): Promise<{ value: string; label: string }[]
 
 ```typescript
 const divisions = await getDivisions('en');
-// [{ value: '1', label: 'Chittagong' }, { value: '2', label: 'Rajshahi' }, ...]
+// [{ value: '1', label: 'Barisal' }, { value: '2', label: 'Chattagram' }, ...]
 
 const divisionsBn = await getDivisions('bn');
-// [{ value: '1', label: 'চট্টগ্রাম' }, ...]
+// [{ value: '1', label: 'বরিশাল' }, ...]
 ```
 
 ---
@@ -129,7 +133,7 @@ getDistricts(divisionId: string, language?: 'en' | 'bn'): Promise<{ value: strin
 
 ```typescript
 const districts = await getDistricts('3', 'en');
-// [{ value: '17', label: 'Dhaka' }, { value: '26', label: 'Gazipur' }, ...]
+// [{ value: '47', label: 'Dhaka' }, { value: '41', label: 'Gazipur' }, ...]
 ```
 
 ---
@@ -146,8 +150,8 @@ getUpazilas(
 ```
 
 ```typescript
-const upazilas = await getUpazilas('17', 'en');
-// [{ id: '101', district_id: '17', name: 'Mirpur', value: '101', label: 'Mirpur', ... }, ...]
+const upazilas = await getUpazilas('47', 'en');
+// [{ id: '530', district_id: '47', name: 'Mirpur', value: '530', label: 'Mirpur', ... }, ...]
 ```
 
 ---
@@ -161,8 +165,8 @@ getUnions(upazilaId: string, language?: 'en' | 'bn'): Promise<{ value: string; l
 ```
 
 ```typescript
-const unions = await getUnions('101', 'en');
-// [{ value: '1001', label: 'Pallabi', url: '' }, ...]
+const unions = await getUnions('365', 'en');
+// [{ value: '3272', label: 'Birulia', url: 'birulia.dhaka.gov.bd' }, ...]
 ```
 
 
@@ -177,10 +181,10 @@ getPostCodes(districtId: string | null, upazila?: string): Promise<PostCode[]>
 ```
 
 ```typescript
-const codes = await getPostCodes('17');
-// [{ division_id: '3', district_id: '17', upazila: 'Mirpur', postOffice: 'Pallabi', postCode: '1216' }, ...]
+const codes = await getPostCodes('47');
+// [{ division_id: '3', district_id: '47', upazila: 'Mirpur', postOffice: 'Mirpur TSO', postCode: '1216' }, ...]
 
-const filtered = await getPostCodes('17', 'Mirpur');
+const filtered = await getPostCodes('47', 'Mirpur');
 ```
 
 ---
@@ -196,8 +200,8 @@ getPostCode(params: { division?: string; district?: string; upazila?: string } |
 ```typescript
 import { getPostCode } from 'bd-geo-info';
 
-const codes = getPostCode({ district: '17', upazila: 'Mirpur' });
-// [{ postCode: '1216', postOffice: 'Pallabi', upazila: 'Mirpur', ... }, ...]
+const codes = getPostCode({ district: '47', upazila: 'Mirpur' });
+// [{ postCode: '1216', postOffice: 'Mirpur TSO', upazila: 'Mirpur', ... }, ...]
 ```
 
 ---
@@ -219,11 +223,11 @@ formatAddress(
 ```
 
 ```typescript
-const address = await formatAddress('3', '17', '101', '1001', '1216', 'House 5, Road 3', 'en');
-// "House 5, Road 3, Pallabi, Mirpur, Dhaka-1216, Dhaka"
+const address = await formatAddress('3', '47', '365', '3272', '1340', 'House 5, Road 3', 'en');
+// "House 5, Road 3, Birulia, Savar, Dhaka-1340, Dhaka"
 
-const addressBn = await formatAddress('3', '17', '101', '1001', '1216', '', 'bn');
-// "পল্লবী, মিরপুর, ঢাকা-১২১৬, ঢাকা"
+const addressBn = await formatAddress('3', '47', '365', '3272', '1340', '', 'bn');
+// "বিরুলিয়া, সাভার, ঢাকা-১৩৪০, ঢাকা"
 ```
 
 ---
@@ -614,7 +618,7 @@ import type { AddressFormData } from 'bd-geo-info/react';
 export default function Page() {
   const handleChange = (data: AddressFormData) => {
     console.log(data);
-    // { division: 'Dhaka', district: 'Dhaka', upazila: 'Mirpur', union: 'Pallabi', postCode: '1216' }
+    // { division: 'Dhaka', district: 'Dhaka', upazila: 'Savar', union: 'Birulia', postCode: '1340' }
   };
 
   return (

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Reference — bd-geo-info</title>
+  <meta name="description" content="Complete API reference documentation for bd-geo-info. Functions, types, parameters, return values for Node.js, React, Bun, Next.js, and all JavaScript runtimes." />
+  <link rel="canonical" href="https://iamtashanto.github.io/bd-geo-info/api.html" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0a0e1a; color: #e2e8f0; }
+    code { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <!-- Nav -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="index.html" class="flex items-center space-x-2">
+          <span class="text-2xl">🇧🇩</span>
+          <span class="font-extrabold text-xl tracking-tight text-white">bd-geo-info</span>
+        </a>
+        <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-full font-mono">v5.1.0</span>
+      </div>
+      <nav class="flex items-center space-x-6 text-sm">
+        <a href="index.html" class="hover:text-emerald-400 transition-colors">Overview</a>
+        <a href="api.html" class="text-emerald-400 font-semibold">API Reference</a>
+        <a href="playground.html" class="hover:text-emerald-400 transition-colors">Playground</a>
+        <a href="https://github.com/iamtashanto/bd-geo-info" target="_blank" class="text-slate-400 hover:text-white transition-colors">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Sidebar -->
+    <aside class="md:col-span-1 space-y-4 text-sm sticky top-24 self-start">
+      <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/50">
+        <h3 class="font-semibold text-slate-300 uppercase tracking-wider text-xs mb-3">Core Functions</h3>
+        <ul class="space-y-2 text-slate-400">
+          <li><a href="#getDivisions" class="hover:text-emerald-400 block">getDivisions</a></li>
+          <li><a href="#getDistricts" class="hover:text-emerald-400 block">getDistricts</a></li>
+          <li><a href="#getUpazilas" class="hover:text-emerald-400 block">getUpazilas</a></li>
+          <li><a href="#getUnions" class="hover:text-emerald-400 block">getUnions</a></li>
+          <li><a href="#getPostCodes" class="hover:text-emerald-400 block">getPostCodes / getPostCode</a></li>
+          <li><a href="#formatAddress" class="hover:text-emerald-400 block">formatAddress</a></li>
+        </ul>
+        <h3 class="font-semibold text-slate-300 uppercase tracking-wider text-xs mt-6 mb-3">React Components</h3>
+        <ul class="space-y-2 text-slate-400">
+          <li><a href="#react-components" class="hover:text-emerald-400 block">AddressForm & Selects</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Details -->
+    <section class="md:col-span-3 space-y-12">
+      <div>
+        <h1 class="text-3xl font-extrabold text-white tracking-tight">API Documentation</h1>
+        <p class="mt-2 text-slate-400">Comprehensive reference for all methods, data shapes, and TypeScript definitions in <code>bd-geo-info</code>.</p>
+      </div>
+
+      <!-- getDivisions -->
+      <article id="getDivisions" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-bold text-emerald-400">getDivisions(language?: 'en' | 'bn')</h2>
+          <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Async</span>
+        </div>
+        <p class="text-slate-300 text-sm">Returns all 8 administrative divisions of Bangladesh formatted for dropdowns or lists.</p>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 overflow-x-auto text-xs font-mono text-emerald-300">
+import { getDivisions } from 'bd-geo-info';<br><br>
+const divisions = await getDivisions('en');<br>
+// Output: [{ value: '1', label: 'Barisal' }, { value: '2', label: 'Chattagram' }, ...]
+        </div>
+      </article>
+
+      <!-- getDistricts -->
+      <article id="getDistricts" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-bold text-emerald-400">getDistricts(divisionId: string, language?: 'en' | 'bn')</h2>
+          <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Async</span>
+        </div>
+        <p class="text-slate-300 text-sm">Returns all 64 districts or filters districts under a specific division ID.</p>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 overflow-x-auto text-xs font-mono text-emerald-300">
+import { getDistricts } from 'bd-geo-info';<br><br>
+const districtsInDhaka = await getDistricts('3', 'en');<br>
+// Output: [{ value: '47', label: 'Dhaka' }, { value: '41', label: 'Gazipur' }, ...]
+        </div>
+      </article>
+
+      <!-- getUpazilas -->
+      <article id="getUpazilas" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-bold text-emerald-400">getUpazilas(districtId: string, language?: 'en' | 'bn')</h2>
+          <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Async</span>
+        </div>
+        <p class="text-slate-300 text-sm">Returns all 610 upazilas & metropolitan thanas under a specific district ID.</p>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 overflow-x-auto text-xs font-mono text-emerald-300">
+import { getUpazilas } from 'bd-geo-info';<br><br>
+const thanas = await getUpazilas('47', 'en');<br>
+// Returns 55 upazilas/thanas including Mirpur, Gulshan, Dhanmondi, Savar, etc.
+        </div>
+      </article>
+
+      <!-- getUnions -->
+      <article id="getUnions" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 space-y-4">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-bold text-emerald-400">getUnions(upazilaId: string, language?: 'en' | 'bn')</h2>
+          <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">Async</span>
+        </div>
+        <p class="text-slate-300 text-sm">Dynamically loads union data for rural upazilas (4,540 unions total). Returns empty array for metropolitan thanas.</p>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 overflow-x-auto text-xs font-mono text-emerald-300">
+import { getUnions } from 'bd-geo-info';<br><br>
+const unions = await getUnions('365', 'en'); // Savar Upazila<br>
+// Output: [{ value: '3272', label: 'Birulia' }, ...]
+        </div>
+      </article>
+
+      <!-- React components -->
+      <article id="react-components" class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 space-y-4">
+        <h2 class="text-xl font-bold text-emerald-400">React UI Components (Optional Subpath)</h2>
+        <p class="text-slate-300 text-sm">Import from <code>bd-geo-info/react</code> for ready-to-use dependent dropdowns.</p>
+        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 overflow-x-auto text-xs font-mono text-emerald-300">
+import { AddressForm, DivisionSelect, DistrictSelect, UpazilaSelect } from 'bd-geo-info/react';<br><br>
+&lt;AddressForm<br>
+&nbsp;&nbsp;language="en"<br>
+&nbsp;&nbsp;onAddressChange={(addr) =&gt; console.log(addr)}<br>
+/&gt;
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+    Released under the MIT License • Open Source Bangladesh Geo Database
+  </footer>
+</body>
+</html>
+

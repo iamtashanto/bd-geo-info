@@ -54,16 +54,16 @@
   "author": {
     "name": "Md Tanvir Ahamed Shanto",
     "email": "mdtanvirahamedshanto@gmail.com",
-    "url": "https://github.com/mdtanvirahamedshanto"
+    "url": "https://github.com/iamtashanto"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mdtanvirahamedshanto/bd-geo-info.git"
+    "url": "git+https://github.com/iamtashanto/bd-geo-info.git"
   },
   "bugs": {
-    "url": "https://github.com/mdtanvirahamedshanto/bd-geo-info/issues"
+    "url": "https://github.com/iamtashanto/bd-geo-info/issues"
   },
-  "homepage": "https://github.com/mdtanvirahamedshanto/bd-geo-info#readme",
+  "homepage": "https://iamtashanto.github.io/bd-geo-info/",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0",

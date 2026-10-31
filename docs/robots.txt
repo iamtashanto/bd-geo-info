@@ -1,0 +1,6 @@
+# Robots.txt for bd-geo-info documentation site
+User-agent: *
+Allow: /
+
+Sitemap: https://iamtashanto.github.io/bd-geo-info/sitemap.xml
+

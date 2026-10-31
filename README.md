@@ -879,7 +879,7 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before
 3. Make your changes and run the build: `npm run build`
 4. Open a pull request against `main`
 
-Bug reports and data corrections belong in [GitHub Issues](https://github.com/mdtanvirahamedshanto/bd-geo-info/issues).
+Bug reports and data corrections belong in [GitHub Issues](https://github.com/iamtashanto/bd-geo-info/issues).
 
 ---
 

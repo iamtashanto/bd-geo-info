@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { FloatingSupport } from '@/components/ui/floating-support';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bdgeoinfo.tashanto.com'),
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | bd-geo-info',
   },
   description:
-    'A lightweight TypeScript library with bilingual (EN/বাংলা) geographical data for Bangladesh — divisions, districts, upazilas, unions, and postcodes. Zero required dependencies.',
+    'Complete Bangladesh geographical data for JavaScript & TypeScript — 8 divisions, 64 districts, 610 upazilas/thanas, 4,540 unions, 1,324 postcodes. Developed by TA Shanto.',
   keywords: [
     'bangladesh geographical data',
     'bangladesh npm package',
@@ -19,24 +20,31 @@ export const metadata: Metadata = {
     'bangladesh address library',
     'bangladesh typescript library',
     'bangla address form',
-    'bd geo',
+    'bd geo info',
+    'TA Shanto',
+    'tashanto',
+    'bangladesh post codes',
   ],
   authors: [{ name: 'TA Shanto', url: 'https://tashanto.com' }],
   creator: 'TA Shanto',
+  publisher: 'TA Shanto',
+  alternates: {
+    canonical: 'https://bdgeoinfo.tashanto.com',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://bdgeoinfo.tashanto.com',
     title: 'bd-geo-info — Bangladesh Geographical Data Library',
     description:
-      'A lightweight TypeScript library with bilingual geographical data for Bangladesh. Zero dependencies. Works with React, Next.js, Vue, Angular, Node.js and more.',
+      'Lightweight, bilingual Bangladesh geographical data library with zero dependencies. Developed by TA Shanto.',
     siteName: 'bd-geo-info',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'bd-geo-info',
+        alt: 'bd-geo-info by TA Shanto',
       },
     ],
   },
@@ -44,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'bd-geo-info — Bangladesh Geographical Data Library',
     description:
-      'A lightweight TypeScript library with bilingual geographical data for Bangladesh.',
+      'Lightweight, bilingual Bangladesh geographical data library. Zero dependencies. Developed by TA Shanto.',
     images: ['/og-image.png'],
     creator: '@iamtashanto',
   },
@@ -54,6 +62,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -62,10 +77,35 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'bd-geo-info',
+    operatingSystem: 'Any',
+    applicationCategory: 'DeveloperApplication',
+    description:
+      'Complete Bangladesh geographical data for JavaScript & TypeScript — divisions, districts, upazilas, unions, postcodes.',
+    url: 'https://bdgeoinfo.tashanto.com',
+    author: {
+      '@type': 'Person',
+      name: 'TA Shanto',
+      url: 'https://tashanto.com',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="min-h-screen flex flex-col antialiased">
         <script
@@ -76,8 +116,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingSupport />
       </body>
     </html>
   );
 }
-

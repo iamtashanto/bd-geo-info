@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { MapPin, Github, Package, Heart, ExternalLink } from 'lucide-react';
+import { MapPin, Github, Package, Heart, ExternalLink, Globe } from 'lucide-react';
 
 const footerLinks = {
   Documentation: [
@@ -14,10 +14,10 @@ const footerLinks = {
     { label: 'Examples', href: '/examples' },
     { label: 'Changelog', href: '/changelog' },
   ],
-  External: [
-    { label: 'GitHub', href: 'https://github.com/iamtashanto/bd-geo-info', external: true },
-    { label: 'npm Package', href: 'https://www.npmjs.com/package/bd-geo-info', external: true },
+  Developer: [
+    { label: 'TA Shanto', href: 'https://tashanto.com', external: true },
     { label: 'SupportKori', href: 'https://www.supportkori.com/iamtashanto', external: true },
+    { label: 'GitHub Profile', href: 'https://github.com/iamtashanto', external: true },
     { label: 'Report an Issue', href: 'https://github.com/iamtashanto/bd-geo-info/issues', external: true },
   ],
 };
@@ -33,11 +33,19 @@ export function Footer() {
               <MapPin className="w-5 h-5 text-indigo-600" />
               bd-geo-info
             </Link>
-            <p className="text-sm text-slate-500 dark:text-slate-400 max-w-xs leading-relaxed">
-              A lightweight TypeScript library with bilingual geographical data for Bangladesh.
-              Zero required dependencies.
+            <p className="text-sm text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed mb-4">
+              Comprehensive Bangladesh geographical data library — divisions, districts, upazilas, unions, and postal codes for JavaScript & TypeScript.
             </p>
-            <div className="flex items-center gap-3 mt-4">
+            <div className="flex items-center gap-3">
+              <a
+                href="https://tashanto.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/50 dark:border-indigo-800/50 hover:bg-indigo-100 transition-colors"
+              >
+                <Globe className="w-3.5 h-3.5" />
+                tashanto.com
+              </a>
               <a
                 href="https://github.com/iamtashanto/bd-geo-info"
                 target="_blank"
@@ -73,15 +81,15 @@ export function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                        className="flex items-center gap-1 text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                       >
                         {link.label}
-                        <ExternalLink className="w-3 h-3" />
+                        <ExternalLink className="w-3 h-3 opacity-70" />
                       </a>
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
+                        className="text-sm text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -96,23 +104,24 @@ export function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-slate-500 dark:text-slate-400">
-            © 2026{' '}
+            © 2026 Developed by{' '}
             <a
               href="https://tashanto.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-slate-900 dark:hover:text-white transition-colors"
+              className="font-medium text-slate-900 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors underline decoration-slate-300 dark:decoration-slate-700 underline-offset-4"
             >
               TA Shanto
             </a>
             . Released under the MIT License.
           </p>
-          <p className="text-sm text-slate-500 dark:text-slate-400 flex items-center gap-1">
-            Made with <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> for Bangladesh 🇧🇩
-          </p>
+          <div className="flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+            <span>
+              Made with <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500 inline" /> in Bangladesh 🇧🇩
+            </span>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
-

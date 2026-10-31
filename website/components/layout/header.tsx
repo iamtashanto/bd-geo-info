@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { MapPin, Github, Package, Menu, X } from 'lucide-react';
+import { MapPin, Github, Package, Menu, X, Coffee } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { MobileNav } from '@/components/layout/mobile-nav';
 import { useState } from 'react';
@@ -12,6 +12,7 @@ const navLinks = [
   { href: '/api-reference', label: 'API Reference' },
   { href: '/playground', label: 'Playground' },
   { href: '/explorer', label: 'Explorer' },
+  { href: '/examples', label: 'Examples' },
   { href: '/changelog', label: 'Changelog' },
 ];
 
@@ -25,10 +26,13 @@ export function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 font-bold text-lg text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-              <MapPin className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-              <span>bd-geo-info</span>
-            </Link>
+            <div className="flex items-center gap-3">
+              <Link href="/" className="flex items-center gap-2 font-bold text-lg text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                <MapPin className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+                <span>bd-geo-info</span>
+              </Link>
+
+            </div>
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-1">
@@ -36,11 +40,10 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    pathname === link.href || pathname.startsWith(link.href + '/')
-                      ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950'
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
+                      ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/60'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
@@ -50,11 +53,20 @@ export function Header() {
             {/* Right side actions */}
             <div className="flex items-center gap-2">
               <a
+                href="https://www.supportkori.com/iamtashanto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 transition-colors shadow-sm"
+              >
+                <Coffee className="w-3.5 h-3.5" />
+                <span>Support</span>
+              </a>
+              <a
                 href="https://github.com/iamtashanto/bd-geo-info"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:flex p-2 rounded-md text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                aria-label="GitHub"
+                aria-label="GitHub repository"
               >
                 <Github className="w-4 h-4" />
               </a>
@@ -63,7 +75,7 @@ export function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden sm:flex p-2 rounded-md text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
-                aria-label="npm"
+                aria-label="npm package"
               >
                 <Package className="w-4 h-4" />
               </a>
@@ -85,4 +97,3 @@ export function Header() {
     </>
   );
 }
-

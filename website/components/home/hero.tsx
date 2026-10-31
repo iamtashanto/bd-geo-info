@@ -55,6 +55,22 @@ export function Hero() {
             {/* Badges */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-xs">
               <a
+                href="https://tashanto.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-3 py-1 bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200/60 dark:border-indigo-800/60 rounded-full text-indigo-700 dark:text-indigo-300 font-medium hover:bg-indigo-100 dark:hover:bg-indigo-900 transition-colors"
+              >
+                <span>Created by TA Shanto</span>
+              </a>
+              <a
+                href="https://www.supportkori.com/iamtashanto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-3 py-1 bg-amber-100 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-800/60 rounded-full text-amber-900 dark:text-amber-200 font-medium hover:bg-amber-200 dark:hover:bg-amber-900 transition-colors"
+              >
+                <span>☕ Support Project</span>
+              </a>
+              <a
                 href="https://www.npmjs.com/package/bd-geo-info"
                 target="_blank"
                 rel="noopener noreferrer"

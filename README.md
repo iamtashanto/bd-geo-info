@@ -8,6 +8,7 @@
 [![npm downloads](https://img.shields.io/npm/dm/bd-geo-info.svg?style=flat-square)](https://www.npmjs.com/package/bd-geo-info)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178c6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![Support Me](https://img.shields.io/badge/Support-SupportKori-ffdd00?style=flat-square&logo=buy-me-a-coffee&logoColor=black)](https://www.supportkori.com/iamtashanto)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/bd-geo-info?style=flat-square)](https://bundlephobia.com/package/bd-geo-info)
 
 Divisions · Districts · Upazilas · Unions · Postcodes — bilingual (EN / বাংলা)
@@ -859,6 +860,15 @@ All data includes both English and বাংলা names.
 **Minified JSON** — all JSON assets are minified at build time (~300 KB saved vs raw source).
 
 ---
+
+
+## 💖 Support the Project
+
+If you find **bd-geo-info** helpful for your personal, commercial, or open-source projects, consider supporting the developer:
+
+[![Support on SupportKori](https://img.shields.io/badge/Support%20on-SupportKori-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.supportkori.com/iamtashanto)
+
+👉 [supportkori.com/iamtashanto](https://www.supportkori.com/iamtashanto)
 
 ## 🤝 Contributing
 

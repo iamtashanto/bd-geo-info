@@ -1,0 +1,144 @@
+import type { Metadata } from 'next';
+import { Tag, CheckCircle } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Changelog',
+  description: 'Release history and changelog for bd-geo-info npm package.',
+};
+
+const releases = [
+  {
+    version: '5.1.0',
+    date: '2026-10',
+    badge: 'Latest',
+    badgeColor: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400',
+    changes: [
+      { type: 'feat', text: 'Added BBS 2025 data verification timestamps (lastUpdated field)' },
+      { type: 'feat', text: 'CI-integrated data validation: schema conformity, duplicate IDs, parent-child consistency' },
+      { type: 'feat', text: 'Build-time JSON minification (~300 KB saved per install)' },
+      { type: 'feat', text: 'Dual CJS + ESM builds for all major bundlers' },
+      { type: 'feat', text: 'React subpath (bd-geo-info/react) — opt-in, does not affect bundle for non-React users' },
+      { type: 'fix', text: 'Metropolitan thana handling — getUnions returns [] for metro thanas' },
+      { type: 'docs', text: 'Complete API documentation and examples' },
+    ],
+  },
+  {
+    version: '5.0.2',
+    date: '2026-09',
+    badge: 'Patch',
+    badgeColor: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400',
+    changes: [
+      { type: 'fix', text: 'Fixed getPostCodes filter logic for district_id vs district name' },
+      { type: 'fix', text: 'TypeScript strict mode compatibility fixes' },
+    ],
+  },
+  {
+    version: '5.0.1',
+    date: '2026-09',
+    badge: 'Patch',
+    badgeColor: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400',
+    changes: [
+      { type: 'fix', text: 'ESM module resolution fix for bundlers that do not support package exports' },
+    ],
+  },
+  {
+    version: '5.0.0',
+    date: '2026-08',
+    badge: 'Major',
+    badgeColor: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400',
+    changes: [
+      { type: 'feat', text: 'Complete rewrite in TypeScript with strict types' },
+      { type: 'feat', text: 'O(1) hash-map lookups — datasets indexed by parent ID' },
+      { type: 'feat', text: 'Code splitting — large datasets load on demand via dynamic imports' },
+      { type: 'feat', text: 'Bilingual support (EN + বাংলা) for all data points' },
+      { type: 'breaking', text: 'All data functions are now async (return Promise)' },
+      { type: 'breaking', text: 'React components moved to bd-geo-info/react subpath' },
+    ],
+  },
+  {
+    version: '4.x',
+    date: '2025',
+    badge: 'Legacy',
+    badgeColor: 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400',
+    changes: [
+      { type: 'note', text: 'Legacy synchronous API. No longer maintained.' },
+      { type: 'note', text: 'Upgrade to v5 for better performance and TypeScript support.' },
+    ],
+  },
+];
+
+const typeColors: Record<string, string> = {
+  feat: 'text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20',
+  fix: 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20',
+  docs: 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20',
+  breaking: 'text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20',
+  note: 'text-slate-500 bg-slate-50 dark:bg-slate-800',
+};
+
+export default function ChangelogPage() {
+  return (
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="mb-10">
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Changelog</h1>
+        <p className="text-slate-600 dark:text-slate-400">
+          Release history for <code className="code-inline">bd-geo-info</code>. Package version: <strong>5.1.0</strong>.
+        </p>
+      </div>
+
+      <div className="relative">
+        {/* Timeline line */}
+        <div className="absolute left-4 top-0 bottom-0 w-px bg-slate-200 dark:bg-slate-700" />
+
+        <div className="space-y-10">
+          {releases.map((release) => (
+            <div key={release.version} className="relative pl-10">
+              {/* Dot */}
+              <div className="absolute left-0 top-1.5 w-8 h-8 rounded-full bg-white dark:bg-slate-950 border-2 border-indigo-400 flex items-center justify-center">
+                <Tag className="w-3.5 h-3.5 text-indigo-500" />
+              </div>
+
+              <div className="card p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <h2 className="text-lg font-bold text-slate-900 dark:text-white font-mono">
+                    v{release.version}
+                  </h2>
+                  <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${release.badgeColor}`}>
+                    {release.badge}
+                  </span>
+                  <span className="text-sm text-slate-400 ml-auto">{release.date}</span>
+                </div>
+
+                <ul className="space-y-2">
+                  {release.changes.map((change, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5">
+                      <span className={`shrink-0 mt-0.5 px-1.5 py-0.5 rounded text-xs font-mono font-medium ${typeColors[change.type] || 'text-slate-500'}`}>
+                        {change.type}
+                      </span>
+                      <span className="text-sm text-slate-600 dark:text-slate-400">{change.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-10 p-4 bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-100 dark:border-indigo-900 rounded-xl flex items-start gap-3">
+        <CheckCircle className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+        <div>
+          <p className="text-sm font-medium text-indigo-800 dark:text-indigo-200">View full changelog on GitHub</p>
+          <a
+            href="https://github.com/iamtashanto/bd-geo-info/releases"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline"
+          >
+            github.com/iamtashanto/bd-geo-info/releases
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+

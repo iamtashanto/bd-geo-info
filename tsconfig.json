@@ -12,5 +12,7 @@
     "strict": true,
     "esModuleInterop": true,
     "rootDir": "./src"
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "website", "docs"]
 }

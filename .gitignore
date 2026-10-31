@@ -40,7 +40,8 @@ Thumbs.db
 .npm
 .yarn-integrity
 yarn.lock
-package-lock.json
+/package-lock.json
+!website/package-lock.json
 
 # Optional
 *.pid

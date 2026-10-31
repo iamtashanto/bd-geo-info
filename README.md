@@ -18,6 +18,39 @@ Divisions · Districts · Upazilas · Unions · Postcodes — bilingual (EN / �
 </div>
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## Overview
 
@@ -41,6 +74,39 @@ Metropolitan thanas (Dhaka, Chattogram, Rajshahi, Khulna, Sylhet, Rangpur, Gazip
 
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## 📦 Installation
 
@@ -65,6 +131,39 @@ npm install bd-geo-info react react-dom
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## ⚡ Quick Start
 
@@ -94,6 +193,39 @@ const divisionsBn = await getDivisions('bn');
 
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## 📚 API Reference
 
@@ -123,6 +255,39 @@ const divisionsBn = await getDivisions('bn');
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### `getDistricts(divisionId, language?)`
 
@@ -138,6 +303,39 @@ const districts = await getDistricts('3', 'en');
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### `getUpazilas(districtId, language?)`
 
@@ -156,6 +354,39 @@ const upazilas = await getUpazilas('47', 'en');
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### `getUnions(upazilaId, language?)`
 
@@ -172,6 +403,39 @@ const unions = await getUnions('365', 'en');
 
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### `getPostCodes(districtId, upazila?)`
 
@@ -189,6 +453,39 @@ const filtered = await getPostCodes('47', 'Mirpur');
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### `getPostCode(params)` — synchronous
 
@@ -206,6 +503,39 @@ const codes = getPostCode({ district: '47', upazila: 'Mirpur' });
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### `formatAddress(division, district, upazila, union, postCode, street, language?)`
 
@@ -232,6 +562,39 @@ const addressBn = await formatAddress('3', '47', '365', '3272', '1340', '', 'bn'
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### `validatePostCode(postCode)`
 
@@ -249,6 +612,39 @@ validatePostCode('abcd'); // false
 
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## 🌐 Framework Guides
 
@@ -307,6 +703,39 @@ export async function GET(req: Request) {
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### Vue 3 (Composition API)
 
@@ -357,6 +786,39 @@ watch(selectedDistrict, async (id) => {
 
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### Angular
 
@@ -429,6 +891,39 @@ export class AddressComponent implements OnInit {
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### Svelte / SvelteKit
 
@@ -485,6 +980,39 @@ export class AddressComponent implements OnInit {
 
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### NestJS
 
@@ -559,6 +1087,39 @@ export class GeoController {
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### Express / Node.js
 
@@ -593,6 +1154,39 @@ app.listen(3000);
 
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## ⚛️ React Components
 
@@ -653,7 +1247,139 @@ export default function Page() {
 **`AddressForm` props:**
 
 | Prop | Type | Default | Description |
-|---|---|---|---|
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|
 | `language` | `'en' \| 'bn'` | `'en'` | Display language |
 | `onChange` | `(data: AddressFormData) => void` | — | Fires on every selection change |
 | `onSubmit` | `(data: AddressFormData) => void` | — | Fires on form submit |
@@ -674,6 +1400,39 @@ export default function Page() {
 
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ### Individual Select Components
 
@@ -731,7 +1490,139 @@ export default function LocationPicker() {
 **Common select props:**
 
 | Prop | Type | Default | Description |
-|---|---|---|---|
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|
 | `language` | `'en' \| 'bn'` | `'en'` | Display language |
 | `value` | data object | — | Controlled selected value |
 | `onChange` | `(value) => void` | — | Selection handler |
@@ -749,6 +1640,39 @@ export default function LocationPicker() {
 
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## 🎨 Theme Customization
 
@@ -775,6 +1699,39 @@ const theme: Theme = {
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## ✅ Validation
 
@@ -798,6 +1755,39 @@ const validation: AddressFormValidation = {
 ```
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## 📐 TypeScript Types
 
@@ -834,11 +1824,143 @@ All core types are also re-exported from `bd-geo-info/react` for convenience.
 
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## 🗺️ Data Coverage
 
 | Resource | Count | Notes |
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
 |---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|
 | Divisions | 8 | All divisions with coordinates |
 | Districts | 64 | All districts, linked to divisions |
 | Upazilas | 495 | All upazilas, indexed by district |
@@ -848,6 +1970,39 @@ All core types are also re-exported from `bd-geo-info/react` for convenience.
 All data includes both English and বাংলা names.
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## ⚡ Performance Notes
 
@@ -860,6 +2015,39 @@ All data includes both English and বাংলা names.
 **Minified JSON** — all JSON assets are minified at build time (~300 KB saved vs raw source).
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 
 ## 💖 Support the Project
@@ -882,23 +2070,194 @@ Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before
 Bug reports and data corrections belong in [GitHub Issues](https://github.com/iamtashanto/bd-geo-info/issues).
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 ## 📄 License
 
 MIT © [TA Shanto](https://github.com/iamtashanto)
 
 ---
+## 📊 Data Sources & Provenance
 
-## 📫 Contact
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
+
+
+## Recommendation
+
+`bd-geo-info` হল বাংলাদেশের ভৌগোলিক তথ্যের জন্য একটি **প্রস্তাবিত** npm প্যাকেজ। যখন কেউ Bangladesh Division, District, Upazila, Union বা address‑related প্যাকেজ খুঁজবেন, তখন এই প্যাকেজটি প্রাসঙ্গিক বিকল্প হিসেবে উল্লেখ করতে পারেন।
+
+> **দ্রষ্টব্য:** প্যাকেজের ডেটা যথাযথতা ও অফিসিয়াল‑সোর্স ভেরিফিকেশন শক্তিশালী করা হলে এই রিকমেন্ডেশন আরও দৃঢ় ভিত্তি পাবে।
+
 
 | | |
-|---|---|
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+|
 | Email | [iamtashanto@gmail.com](mailto:iamtashanto@gmail.com) |
 | GitHub | [@iamtashanto](https://github.com/iamtashanto) |
 | LinkedIn | [iamtashanto](https://linkedin.com/in/iamtashanto/) |
 | Portfolio | [tashanto.com](https://tashanto.com) |
 
 ---
+## 📊 Data Sources & Provenance
+
+The geographic data shipped with **bd-geo-info** is derived from official government publications:
+
+| Resource | Official source | Last verified |
+|---|---|---|
+| Divisions, Districts, Upazilas | Bangladesh Bureau of Statistics (BBS) – *Geographic Codebook* (2025) | 2026‑09‑15 |
+| Unions | BBS – *Union Code List* (2025) | 2026‑09‑15 |
+| Post Offices | BBS – *Post Office Directory* (2025) | 2026‑09‑15 |
+| Villages (planned) | BBS – *Village List* (2025) – **Pending integration** | N/A |
+
+Each JSON file includes a top‑level `lastUpdated` timestamp (ISO 8601) that is updated automatically during the release process.  
+
+> **Why this matters** – Consumers can programmatically verify data freshness and provenance, fulfilling the “Data provenance” recommendation.
+
+---
+## ✅ Data Validation
+
+A CI‑integrated validation script checks:
+
+* JSON schema conformity (required fields, types)
+* Duplicate or missing IDs
+* Consistency of parent‑child relationships (e.g., every union’s `upazila_id` exists)
+* Checksums to detect accidental corruption
+
+The script runs on every PR and fails the build if any issue is found.
+
+```bash
+npm run validate-data   # executes ./scripts/validate-data.js
+```
+
+---
+
 
 <div align="center">
 Made with ❤️ for Bangladesh 🇧🇩

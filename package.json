@@ -63,7 +63,7 @@
   "bugs": {
     "url": "https://github.com/iamtashanto/bd-geo-info/issues"
   },
-  "homepage": "https://iamtashanto.github.io/bd-geo-info/",
+  "homepage": "https://bdgeoinfo.tashanto.com",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0",

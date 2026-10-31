@@ -2,5 +2,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iamtashanto.github.io/bd-geo-info/sitemap.xml
+Sitemap: https://bdgeoinfo.tashanto.comsitemap.xml
 

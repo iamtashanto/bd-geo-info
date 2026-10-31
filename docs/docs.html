@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Documentation & Framework Integration Guides — bd-geo-info</title>
-  <meta name="description" content="Step-by-step guides for integrating bd-geo-info into React, Next.js, Node.js, Express, NestJS, Vue, Angular, Bun, and Deno." />
-  <link rel="canonical" href="https://iamtashanto.github.io/bd-geo-info/docs.html" />
+  <meta name="description"
+    content="Step-by-step guides for integrating bd-geo-info into React, Next.js, Node.js, Express, NestJS, Vue, Angular, Bun, and Deno." />
+  <link rel="canonical" href="https://bdgeoinfo.tashanto.comdocs.html" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
   <style>
-    body { font-family: 'Inter', sans-serif; background: #0a0e1a; color: #e2e8f0; }
-    code { font-family: 'JetBrains Mono', monospace; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0e1a;
+      color: #e2e8f0;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+    }
   </style>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="theme-color" content="#006a4e" />
 </head>
+
 <body class="min-h-screen flex flex-col">
-    <!-- Professional Unified Header -->
+  <!-- Professional Unified Header -->
   <header class="border-b border-slate-800/80 bg-slate-900/90 backdrop-blur-md sticky top-0 z-40 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="index.html" class="flex items-center space-x-2.5 group">
-          <img src="favicon.svg" alt="bd-geo-info logo" class="w-8 h-8 rounded-lg shadow-md group-hover:scale-105 transition-transform" />
-          <span class="font-black text-xl tracking-tight text-white group-hover:text-emerald-400 transition-colors">bd-geo-info</span>
+          <img src="favicon.svg" alt="bd-geo-info logo"
+            class="w-8 h-8 rounded-lg shadow-md group-hover:scale-105 transition-transform" />
+          <span
+            class="font-black text-xl tracking-tight text-white group-hover:text-emerald-400 transition-colors">bd-geo-info</span>
         </a>
-        <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-0.5 rounded-full font-mono font-medium">v5.1.0</span>
+        <span
+          class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-0.5 rounded-full font-mono font-medium">v5.1.0</span>
       </div>
-      
+
       <nav class="hidden md:flex items-center space-x-7 text-sm font-medium">
         <a href="index.html" class="text-slate-300 hover:text-emerald-400 transition-colors">Overview</a>
         <a href="docs.html" class="text-emerald-400 font-semibold">Docs</a>
@@ -36,12 +51,17 @@
       </nav>
 
       <div class="flex items-center space-x-3">
-        <a href="https://www.supportkori.com/iamtashanto" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1.5 bg-amber-400/10 hover:bg-amber-400/20 text-amber-400 border border-amber-400/30 px-3 py-1.5 rounded-full text-xs font-semibold transition-all shadow-sm">
+        <a href="https://www.supportkori.com/iamtashanto" target="_blank" rel="noopener noreferrer"
+          class="hidden sm:flex items-center gap-1.5 bg-amber-400/10 hover:bg-amber-400/20 text-amber-400 border border-amber-400/30 px-3 py-1.5 rounded-full text-xs font-semibold transition-all shadow-sm">
           <span>☕</span>
           <span>Support</span>
         </a>
-        <a href="https://github.com/iamtashanto/bd-geo-info" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold px-3.5 py-1.5 rounded-lg border border-slate-700 transition-all">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <a href="https://github.com/iamtashanto/bd-geo-info" target="_blank" rel="noopener noreferrer"
+          class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-xs font-semibold px-3.5 py-1.5 rounded-lg border border-slate-700 transition-all">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
           <span class="hidden sm:inline">GitHub</span>
         </a>
       </div>
@@ -73,7 +93,8 @@
     <section class="md:col-span-3 space-y-12">
       <div>
         <h1 class="text-3xl font-extrabold text-white tracking-tight">Integration & Usage Guide</h1>
-        <p class="mt-2 text-slate-400">Step-by-step instructions for installing and consuming bd-geo-info in any modern JavaScript or TypeScript environment.</p>
+        <p class="mt-2 text-slate-400">Step-by-step instructions for installing and consuming bd-geo-info in any modern
+          JavaScript or TypeScript environment.</p>
       </div>
 
       <!-- Installation -->
@@ -81,7 +102,8 @@
         <h2 class="text-xl font-bold text-white flex items-center gap-2">
           <span class="text-emerald-400">📦</span> Package Installation
         </h2>
-        <p class="text-slate-300 text-sm">Use your preferred package manager to add <code>bd-geo-info</code> to your project dependencies:</p>
+        <p class="text-slate-300 text-sm">Use your preferred package manager to add <code>bd-geo-info</code> to your
+          project dependencies:</p>
         <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono text-emerald-300 space-y-2">
           <div><span class="text-slate-500"># npm</span><br>npm install bd-geo-info</div>
           <div><span class="text-slate-500"># bun</span><br>bun add bd-geo-info</div>
@@ -95,16 +117,18 @@
         <h2 class="text-xl font-bold text-white flex items-center gap-2">
           <span class="text-emerald-400">▲</span> Next.js (Server & Client Components)
         </h2>
-        <p class="text-slate-300 text-sm">Because <code>bd-geo-info</code> functions are pure and async, you can use them inside Server Actions, Route Handlers, or Client Components without any webpack/turbopack issues.</p>
-        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono text-slate-300 overflow-x-auto">
-<span class="text-slate-500">// app/api/locations/route.ts</span><br>
-import { NextResponse } from 'next/server';<br>
-import { getDivisions, getDistricts } from 'bd-geo-info';<br><br>
-export async function GET(request: Request) {<br>
-&nbsp;&nbsp;const divisions = await getDivisions('en');<br>
-&nbsp;&nbsp;const dhakaDistricts = await getDistricts('3', 'en');<br>
-&nbsp;&nbsp;return NextResponse.json({ divisions, dhakaDistricts });<br>
-}
+        <p class="text-slate-300 text-sm">Because <code>bd-geo-info</code> functions are pure and async, you can use
+          them inside Server Actions, Route Handlers, or Client Components without any webpack/turbopack issues.</p>
+        <div
+          class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono text-slate-300 overflow-x-auto">
+          <span class="text-slate-500">// app/api/locations/route.ts</span><br>
+          import { NextResponse } from 'next/server';<br>
+          import { getDivisions, getDistricts } from 'bd-geo-info';<br><br>
+          export async function GET(request: Request) {<br>
+          &nbsp;&nbsp;const divisions = await getDivisions('en');<br>
+          &nbsp;&nbsp;const dhakaDistricts = await getDistricts('3', 'en');<br>
+          &nbsp;&nbsp;return NextResponse.json({ divisions, dhakaDistricts });<br>
+          }
         </div>
       </article>
 
@@ -113,16 +137,18 @@ export async function GET(request: Request) {<br>
         <h2 class="text-xl font-bold text-white flex items-center gap-2">
           <span class="text-emerald-400">🟢</span> Node.js & Express (CJS or ESM)
         </h2>
-        <p class="text-slate-300 text-sm">Works out of the box in both CommonJS (<code>require</code>) and ES Modules (<code>import</code>).</p>
-        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono text-slate-300 overflow-x-auto">
-const express = require('express');<br>
-const { getUpazilas, getPostCode } = require('bd-geo-info');<br>
-const app = express();<br><br>
-app.get('/api/thanas', async (req, res) => {<br>
-&nbsp;&nbsp;const districtId = req.query.districtId || '47';<br>
-&nbsp;&nbsp;const thanas = await getUpazilas(districtId, 'bn');<br>
-&nbsp;&nbsp;res.json(thanas);<br>
-});
+        <p class="text-slate-300 text-sm">Works out of the box in both CommonJS (<code>require</code>) and ES Modules
+          (<code>import</code>).</p>
+        <div
+          class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono text-slate-300 overflow-x-auto">
+          const express = require('express');<br>
+          const { getUpazilas, getPostCode } = require('bd-geo-info');<br>
+          const app = express();<br><br>
+          app.get('/api/thanas', async (req, res) => {<br>
+          &nbsp;&nbsp;const districtId = req.query.districtId || '47';<br>
+          &nbsp;&nbsp;const thanas = await getUpazilas(districtId, 'bn');<br>
+          &nbsp;&nbsp;res.json(thanas);<br>
+          });
         </div>
       </article>
 
@@ -131,15 +157,16 @@ app.get('/api/thanas', async (req, res) => {<br>
         <h2 class="text-xl font-bold text-white flex items-center gap-2">
           <span class="text-emerald-400">🦁</span> NestJS Service Integration
         </h2>
-        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono text-slate-300 overflow-x-auto">
-import { Injectable } from '@nestjs/common';<br>
-import { getDistricts, getUpazilas } from 'bd-geo-info';<br><br>
-@Injectable()<br>
-export class GeoService {<br>
-&nbsp;&nbsp;async getThanasByDistrict(districtId: string) {<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return await getUpazilas(districtId, 'en');<br>
-&nbsp;&nbsp;}<br>
-}
+        <div
+          class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono text-slate-300 overflow-x-auto">
+          import { Injectable } from '@nestjs/common';<br>
+          import { getDistricts, getUpazilas } from 'bd-geo-info';<br><br>
+          @Injectable()<br>
+          export class GeoService {<br>
+          &nbsp;&nbsp;async getThanasByDistrict(districtId: string) {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;return await getUpazilas(districtId, 'en');<br>
+          &nbsp;&nbsp;}<br>
+          }
         </div>
       </article>
 
@@ -149,17 +176,18 @@ export class GeoService {<br>
           <span class="text-emerald-400">⚡</span> Bun & Deno
         </h2>
         <p class="text-slate-300 text-sm">Full native support with zero polyfills or build steps required.</p>
-        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono text-slate-300 overflow-x-auto">
-<span class="text-slate-500">// In Deno or Bun</span><br>
-import { getDivisions, getPostCodes } from 'npm:bd-geo-info';<br><br>
-const codes = await getPostCodes('47', 'Mirpur');<br>
-console.log(codes);
+        <div
+          class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs font-mono text-slate-300 overflow-x-auto">
+          <span class="text-slate-500">// In Deno or Bun</span><br>
+          import { getDivisions, getPostCodes } from 'npm:bd-geo-info';<br><br>
+          const codes = await getPostCodes('47', 'Mirpur');<br>
+          console.log(codes);
         </div>
       </article>
     </section>
   </main>
 
-    <!-- Professional Unified Footer -->
+  <!-- Professional Unified Footer -->
   <footer class="border-t border-slate-800/80 bg-slate-950/80 pt-12 pb-8 text-slate-400 text-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -169,10 +197,12 @@ console.log(codes);
             <span class="font-extrabold text-white text-base">bd-geo-info</span>
           </div>
           <p class="text-xs text-slate-400 leading-relaxed">
-            The authoritative, zero-dependency Bangladesh geographic database for all JavaScript, TypeScript, Frontend & Backend runtimes.
+            The authoritative, zero-dependency Bangladesh geographic database for all JavaScript, TypeScript, Frontend &
+            Backend runtimes.
           </p>
           <div class="pt-1">
-            <a href="https://www.supportkori.com/iamtashanto" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 font-semibold bg-amber-400/10 px-2.5 py-1 rounded border border-amber-400/20">
+            <a href="https://www.supportkori.com/iamtashanto" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs text-amber-400 hover:text-amber-300 font-semibold bg-amber-400/10 px-2.5 py-1 rounded border border-amber-400/20">
               ☕ Support via SupportKori
             </a>
           </div>
@@ -196,27 +226,34 @@ console.log(codes);
             <li><a href="terms.html" class="hover:text-emerald-400 transition-colors">Terms of Service</a></li>
             <li><a href="sitemap.xml" class="hover:text-emerald-400 transition-colors">Sitemap (XML)</a></li>
             <li><a href="robots.txt" class="hover:text-emerald-400 transition-colors">Robots.txt</a></li>
-            <li><a href="https://www.npmjs.com/package/bd-geo-info" target="_blank" class="hover:text-emerald-400 transition-colors">npm Package</a></li>
+            <li><a href="https://www.npmjs.com/package/bd-geo-info" target="_blank"
+                class="hover:text-emerald-400 transition-colors">npm Package</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Developer</h4>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Created & Maintained by <a href="https://tashanto.com" target="_blank" class="text-emerald-400 font-semibold hover:underline">TA Shanto</a>.
+            Created & Maintained by <a href="https://tashanto.com" target="_blank"
+              class="text-emerald-400 font-semibold hover:underline">TA Shanto</a>.
           </p>
           <div class="mt-3 flex items-center space-x-3 text-xs">
-            <a href="https://tashanto.com" target="_blank" class="text-slate-400 hover:text-white transition-colors">Portfolio</a>
+            <a href="https://tashanto.com" target="_blank"
+              class="text-slate-400 hover:text-white transition-colors">Portfolio</a>
             <span>•</span>
-            <a href="https://github.com/iamtashanto" target="_blank" class="text-slate-400 hover:text-white transition-colors">GitHub</a>
+            <a href="https://github.com/iamtashanto" target="_blank"
+              class="text-slate-400 hover:text-white transition-colors">GitHub</a>
             <span>•</span>
-            <a href="https://www.supportkori.com/iamtashanto" target="_blank" class="text-amber-400 hover:underline">Support</a>
+            <a href="https://www.supportkori.com/iamtashanto" target="_blank"
+              class="text-amber-400 hover:underline">Support</a>
           </div>
         </div>
       </div>
 
-      <div class="border-t border-slate-800/80 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-        <p>Released under the MIT License • Copyright &copy; 2026 <a href="https://tashanto.com" target="_blank" class="text-slate-400 hover:text-white">TA Shanto</a></p>
+      <div
+        class="border-t border-slate-800/80 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>Released under the MIT License • Copyright &copy; 2026 <a href="https://tashanto.com" target="_blank"
+            class="text-slate-400 hover:text-white">TA Shanto</a></p>
         <div class="flex space-x-4">
           <a href="privacy.html" class="hover:text-slate-300">Privacy</a>
           <a href="terms.html" class="hover:text-slate-300">Terms</a>
@@ -228,7 +265,8 @@ console.log(codes);
 
   <!-- Floating Support Button -->
   <aside aria-label="Support Creator" class="fixed bottom-6 right-6 z-50">
-    <a href="https://www.supportkori.com/iamtashanto" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold px-4 py-2.5 rounded-full shadow-2xl shadow-amber-500/40 border border-amber-300/30 transition-all transform hover:scale-105 active:scale-95 group">
+    <a href="https://www.supportkori.com/iamtashanto" target="_blank" rel="noopener noreferrer"
+      class="flex items-center gap-2.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold px-4 py-2.5 rounded-full shadow-2xl shadow-amber-500/40 border border-amber-300/30 transition-all transform hover:scale-105 active:scale-95 group">
       <span class="text-lg">☕</span>
       <span class="text-sm font-extrabold tracking-wide">Support TA Shanto</span>
       <span class="hidden group-hover:inline text-xs bg-slate-950 text-amber-300 px-2 py-0.5 rounded-full">↗</span>
@@ -236,5 +274,5 @@ console.log(codes);
   </aside>
 
 </body>
-</html>
 
+</html>

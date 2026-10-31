@@ -24,12 +24,12 @@
   "sideEffects": false,
   "scripts": {
     "build": "npm run build:cjs && npm run build:esm && npm run build:types && npm run build:react:cjs && npm run build:react:esm && npm run build:react:types && node scripts/minify-json.js",
-    "build:cjs": "npx tsc -p tsconfig.cjs.json",
-    "build:esm": "npx tsc -p tsconfig.esm.json",
-    "build:types": "npx tsc -p tsconfig.types.json",
-    "build:react:cjs": "npx tsc -p tsconfig.react.cjs.json",
-    "build:react:esm": "npx tsc -p tsconfig.react.esm.json",
-    "build:react:types": "npx tsc -p tsconfig.react.types.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:react:cjs": "tsc -p tsconfig.react.cjs.json",
+    "build:react:esm": "tsc -p tsconfig.react.esm.json",
+    "build:react:types": "tsc -p tsconfig.react.types.json",
     "test": "jest",
     "prepare": "npm run build"
   },

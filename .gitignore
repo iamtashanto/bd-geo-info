@@ -4,7 +4,8 @@ node_modules/
 # Build outputs
 dist/
 build/
-lib/
+# Root lib/ only, preserve website/lib/
+/lib/
 
 # TypeScript
 *.tsbuildinfo

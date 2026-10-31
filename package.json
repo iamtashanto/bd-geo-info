@@ -31,7 +31,7 @@
     "build:react:esm": "tsc -p tsconfig.react.esm.json",
     "build:react:types": "tsc -p tsconfig.react.types.json",
     "test": "jest",
-    "prepare": "npm run build"
+    "prepare": "node -e \"if(process.env.NODE_ENV!=='production'){try{require('child_process').execSync('npm run build',{stdio:'inherit'})}catch(e){}}\""
   },
   "keywords": [
     "bangladesh",

@@ -17,7 +17,7 @@ export function Hero() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-xs font-medium mb-6">
               <MapPin className="w-3.5 h-3.5" />
-              v5.1.0 — Latest Release
+              v5.1.1 — Latest Release
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight mb-6">
@@ -76,7 +76,7 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1 px-2.5 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
               >
-                <Package className="w-3.5 h-3.5" /> npm v5.1.0
+                <Package className="w-3.5 h-3.5" /> npm v5.1.1
               </a>
               <a
                 href="https://github.com/iamtashanto/bd-geo-info"

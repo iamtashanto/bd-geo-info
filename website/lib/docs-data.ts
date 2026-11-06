@@ -35,6 +35,10 @@ export const docsNav: DocNavSection[] = [
       { title: 'getUpazilas', href: '/docs/api/upazilas', description: 'Fetch upazilas for a district' },
       { title: 'getUnions', href: '/docs/api/unions', description: 'Fetch unions for an upazila' },
       { title: 'getPostCodes', href: '/docs/api/postcodes', description: 'Fetch postcodes for a district' },
+      { title: 'searchLocations', href: '/docs/api/search', description: 'Search every Bangladesh location' },
+      { title: 'findLocation', href: '/docs/api/find-location', description: 'Find one location by name or ID' },
+      { title: 'validateAddress', href: '/docs/api/validate-address', description: 'Validate location selections' },
+      { title: 'distance and nearest', href: '/docs/api/geo', description: 'Distance and coordinate lookup utilities' },
       { title: 'formatAddress', href: '/docs/api/format-address', description: 'Format a full address string' },
       { title: 'validatePostCode', href: '/docs/api/validate-postcode', description: 'Validate a Bangladesh postcode' },
     ],
@@ -47,6 +51,7 @@ export const docsNav: DocNavSection[] = [
       { title: 'DistrictSelect', href: '/docs/react/district-select', description: 'District dropdown select' },
       { title: 'UpazilaSelect', href: '/docs/react/upazila-select', description: 'Upazila dropdown select' },
       { title: 'UnionSelect', href: '/docs/react/union-select', description: 'Union dropdown select' },
+      { title: 'LocationSearch', href: '/docs/react/location-search', description: 'Searchable all-Bangladesh location picker' },
     ],
   },
   {
@@ -87,4 +92,3 @@ export function getAdjacentDocs(currentHref: string): {
     next: idx < allItems.length - 1 ? allItems[idx + 1] : null,
   };
 }
-

@@ -28,7 +28,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-              A lightweight, zero-dependency TypeScript library with bilingual (EN / বাংলা) geographical data for Bangladesh —{' '}
+              A lightweight, zero-dependency TypeScript library with bilingual (EN / বাংলা) geographical data, instant all-Bangladesh search, address validation and coordinate utilities —{' '}
               <strong className="text-slate-800 dark:text-slate-200">8 divisions</strong>,{' '}
               <strong className="text-slate-800 dark:text-slate-200">64 districts</strong>,{' '}
               <strong className="text-slate-800 dark:text-slate-200">610 upazilas</strong>,{' '}
@@ -104,4 +104,3 @@ export function Hero() {
     </section>
   );
 }
-

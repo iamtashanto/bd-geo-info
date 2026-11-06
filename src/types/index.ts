@@ -87,3 +87,12 @@ export interface Theme {
     label?: string;
   };
 }
+
+export type {
+  AddressValidationResult,
+  Coordinates,
+  LocationSearchResult,
+  LocationTree,
+  LocationType,
+  SearchLocationsOptions,
+} from './search';

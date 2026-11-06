@@ -19,6 +19,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/docs/api/upazilas`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/docs/api/unions`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/docs/api/postcodes`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/docs/api/search`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/docs/api/find-location`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/docs/api/validate-address`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${baseUrl}/docs/api/geo`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/docs/api/format-address`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/docs/api/validate-postcode`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/docs/react/address-form`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
@@ -26,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/docs/react/district-select`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/docs/react/upazila-select`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/docs/react/union-select`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${baseUrl}/docs/react/location-search`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/docs/examples/basic-form`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/docs/examples/cascading`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/docs/examples/bangla`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
@@ -34,9 +39,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/docs/advanced/custom-styling`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/playground`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/explorer`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/benchmarks`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${baseUrl}/api-reference`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/changelog`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${baseUrl}/examples`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
   ];
 }
-

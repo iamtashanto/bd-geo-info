@@ -453,6 +453,40 @@ const filtered = await getPostCodes('47', 'Mirpur');
 ```
 
 ---
+
+### `searchLocations(options)`
+
+Search every Bangladesh location offline by English name, বাংলা name, alias, postcode, or ID.
+
+```typescript
+const results = searchLocations({
+  query: 'Barishal',
+  types: ['division', 'district', 'upazila', 'union', 'postcode'],
+  limit: 20,
+});
+```
+
+Use `divisionId` or `districtId` for hierarchical filtering. `findLocation(query, types?)` returns the best single match, while `getLocationTree()` returns the complete nested hierarchy.
+
+### `validateAddress(data)`
+
+Validates location names and postcode format and returns `{ valid, errors }`.
+
+### `distanceBetween(a, b)` and `findNearestLocation(coordinates, types?)`
+
+Calculate great-circle distance in kilometres or find the nearest division/district from latitude and longitude coordinates.
+
+### React search
+
+The optional React entry point includes `LocationSearch` and `useLocationSearch`:
+
+```tsx
+import { LocationSearch } from 'bd-geo-info/react';
+
+<LocationSearch types={['division', 'district', 'postcode']} onChange={console.log} />
+```
+
+---
 ## 📊 Data Sources & Provenance
 
 The geographic data shipped with **bd-geo-info** is derived from official government publications:

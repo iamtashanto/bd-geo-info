@@ -248,6 +248,44 @@ const unionId    = '3272'; // Birulia Union`} />
 // [{ district_id: '47', upazila: 'Mirpur', postOffice: 'Mirpur-10', postCode: '1216', ... }]`} />
       </article>
     ),
+    'api/search': (
+      <article className="prose-custom">
+        <h1>searchLocations</h1>
+        <p className="lead">Search all Bangladesh divisions, districts, upazilas, unions and post offices by English name, বাংলা name, alias or ID.</p>
+        <CodeBlock language="typescript" code={`import { searchLocations } from 'bd-geo-info';
+
+const results = searchLocations({ query: 'Barishal', limit: 10 });
+// [{ type: 'division', name: 'Barisal', ... }]`} />
+        <p>Use <code>types</code>, <code>divisionId</code>, <code>districtId</code> and <code>limit</code> to narrow results.</p>
+      </article>
+    ),
+    'api/find-location': (
+      <article className="prose-custom">
+        <h1>findLocation</h1>
+        <p className="lead">Return the best single match for a location name or ID.</p>
+        <CodeBlock language="typescript" code={`import { findLocation } from 'bd-geo-info';
+const barishal = findLocation('বরিশাল', ['division']);
+const dhaka = findLocation('47', ['district']);`} />
+      </article>
+    ),
+    'api/validate-address': (
+      <article className="prose-custom">
+        <h1>validateAddress</h1>
+        <p className="lead">Validate submitted location names and postcode format before saving an address.</p>
+        <CodeBlock language="typescript" code={`import { validateAddress } from 'bd-geo-info';
+const result = validateAddress({ division: 'Barisal', district: 'Pirojpur', postCode: '8500' });
+if (!result.valid) console.log(result.errors);`} />
+      </article>
+    ),
+    'api/geo': (
+      <article className="prose-custom">
+        <h1>Coordinate utilities</h1>
+        <p className="lead">Calculate distance in kilometres or find the nearest division/district from coordinates.</p>
+        <CodeBlock language="typescript" code={`import { distanceBetween, findNearestLocation } from 'bd-geo-info';
+const km = distanceBetween({ latitude: 23.81, longitude: 90.41 }, { latitude: 22.70, longitude: 90.35 });
+const nearest = findNearestLocation({ latitude: 23.81, longitude: 90.41 });`} />
+      </article>
+    ),
     'api/format-address': (
       <article className="prose-custom">
         <h1>formatAddress</h1>
@@ -335,6 +373,19 @@ validatePostCode('abcd'); // false — not digits`} />
   value={union}
   onChange={(val) => setUnion(val)}
   language="en"
+/>`} />
+      </article>
+    ),
+    'react/location-search': (
+      <article className="prose-custom">
+        <h1>LocationSearch</h1>
+        <p className="lead">Add an accessible all-Bangladesh location search box to a React application.</p>
+        <CodeBlock language="tsx" code={`import { LocationSearch } from 'bd-geo-info/react';
+
+<LocationSearch
+  types={['division', 'district', 'postcode']}
+  language="bn"
+  onChange={(location) => console.log(location)}
 />`} />
       </article>
     ),
@@ -485,4 +536,3 @@ export default function DocSlugPage({ params }: Props) {
     </div>
   );
 }
-

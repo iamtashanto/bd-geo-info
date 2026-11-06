@@ -1,4 +1,6 @@
 import { Division, District, Upazila, Union, PostCode, UnionData } from '../types';
+export { findLocation, getLocationTree, normalizeLocationQuery, searchLocations } from './searchLocations';
+export { distanceBetween, findNearestLocation, validateAddress } from './location';
 
 export const getDivisions = async (language: 'en' | 'bn' = 'en'): Promise<{ value: string; label: string }[]> => {
   const divisions = (await import('../data/bd-divisions.json')).default.divisions;

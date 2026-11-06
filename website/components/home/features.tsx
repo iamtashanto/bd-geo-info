@@ -66,6 +66,22 @@ const features = [
   },
   {
     icon: Globe2,
+    title: 'Search Every Location',
+    description:
+      'Search divisions, districts, upazilas, unions and post offices from one API using English, বাংলা, aliases or IDs.',
+    color: 'text-cyan-500',
+    bg: 'bg-cyan-50 dark:bg-cyan-900/20',
+  },
+  {
+    icon: Shield,
+    title: 'Address Validation',
+    description:
+      'Validate user-submitted location values and keep Bangladesh address forms consistent across your application.',
+    color: 'text-rose-500',
+    bg: 'bg-rose-50 dark:bg-rose-900/20',
+  },
+  {
+    icon: Globe2,
     title: 'Framework Agnostic',
     description:
       'Works with React, Next.js, Vue, Angular, Svelte, NestJS, Express, Bun, Deno, or plain Node.js.',
@@ -131,4 +147,3 @@ export function Features() {
     </section>
   );
 }
-

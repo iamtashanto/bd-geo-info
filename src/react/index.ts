@@ -4,6 +4,8 @@ export { default as DivisionSelect } from '../components/DivisionSelect';
 export { default as DistrictSelect } from '../components/DistrictSelect';
 export { default as UpazilaSelect } from '../components/UpazilaSelect';
 export { default as UnionSelect } from '../components/UnionSelect';
+export { default as LocationSearch } from '../components/LocationSearch';
+export { useLocationSearch } from './useLocationSearch';
 
 // React-specific types
 export type {
@@ -13,6 +15,7 @@ export type {
   SelectProps,
   PostOfficeSelectProps,
 } from '../types/react';
+export type { LocationSearchProps } from '../components/LocationSearch';
 
 // Re-export core types and utils for convenience
 export * from '../types';

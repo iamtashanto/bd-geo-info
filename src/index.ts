@@ -6,6 +6,7 @@ export { getDistricts as getDistrictsList } from './utils/getDistricts';
 export { default as getUpazilasList } from './utils/getUpazilas';
 export { getUnions as getUnionsList, getUnionsList as getUnionsSync } from './utils/getUnions';
 export { default as getPostCode } from './utils/getPostCode';
+export { findLocation, getLocationTree, normalizeLocationQuery, searchLocations, distanceBetween, findNearestLocation, validateAddress } from './utils';
 
 // Core types (no React dependency)
 export type {
@@ -19,4 +20,10 @@ export type {
   AddressFormValidation,
   ValidationRules,
   Theme,
+  AddressValidationResult,
+  Coordinates,
+  LocationSearchResult,
+  LocationTree,
+  LocationType,
+  SearchLocationsOptions,
 } from './types';

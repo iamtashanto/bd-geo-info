@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { getDivisions, getDistricts, getUpazilas, getUnions } from 'bd-geo-info';
+import { getDivisions, getDistricts, getUpazilas, getUnions, searchLocations, type LocationSearchResult } from 'bd-geo-info';
 import { RotateCcw, Globe } from 'lucide-react';
 import { CopyButton } from '@/components/docs/copy-button';
 
@@ -19,6 +19,8 @@ export function LocationPlayground() {
   const [district, setDistrict] = useState('');
   const [upazila, setUpazila] = useState('');
   const [union, setUnion] = useState('');
+  const [search, setSearch] = useState('');
+  const [searchType, setSearchType] = useState<'all' | LocationSearchResult['type']>('all');
 
   const [loading, setLoading] = useState({ divisions: false, districts: false, upazilas: false, unions: false });
 
@@ -78,6 +80,14 @@ export function LocationPlayground() {
     setDivision(''); setDistrict(''); setUpazila(''); setUnion('');
   };
 
+  const searchResults = search.trim()
+    ? searchLocations({
+      query: search,
+      types: searchType === 'all' ? undefined : [searchType],
+      limit: 8,
+    })
+    : [];
+
   const selectionJson = JSON.stringify(
     {
       division: divisions.find((d) => d.value === division) || null,
@@ -119,6 +129,52 @@ export function LocationPlayground() {
               <RotateCcw className="w-4 h-4" />
             </button>
           </div>
+        </div>
+
+        <div className="mb-6 rounded-xl border border-indigo-100 bg-indigo-50/60 p-4 dark:border-indigo-900/50 dark:bg-indigo-950/20">
+          <label htmlFor="location-search" className="mb-2 block text-sm font-medium text-slate-800 dark:text-slate-200">
+            Search any Bangladesh location
+          </label>
+          <div className="flex gap-2">
+            <input
+              id="location-search"
+              value={search}
+              onChange={(event) => setSearch(event.target.value)}
+              placeholder="Try Barishal, বরিশাল, Dhaka 1206..."
+              className="min-w-0 flex-1 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm dark:border-slate-700 dark:bg-slate-900"
+            />
+            <select
+              value={searchType}
+              onChange={(event) => setSearchType(event.target.value as typeof searchType)}
+              className="rounded-lg border border-slate-200 bg-white px-2 text-sm dark:border-slate-700 dark:bg-slate-900"
+              aria-label="Search location type"
+            >
+              <option value="all">All</option>
+              <option value="division">Division</option>
+              <option value="district">District</option>
+              <option value="upazila">Upazila</option>
+              <option value="union">Union</option>
+              <option value="postcode">Postcode</option>
+            </select>
+          </div>
+          {searchResults.length > 0 && (
+            <div className="mt-3 space-y-1">
+              {searchResults.map((result) => (
+                <button
+                  key={`${result.type}-${result.id}`}
+                  type="button"
+                  onClick={() => setSearch(result.name)}
+                  className="block w-full rounded-lg px-3 py-2 text-left hover:bg-white dark:hover:bg-slate-800"
+                >
+                  <span className="block text-sm font-medium text-slate-900 dark:text-white">{lang === 'bn' ? result.bn_name : result.name}</span>
+                  <span className="block text-xs text-slate-500">{result.type} · {result.path.join(' / ')}</span>
+                </button>
+              ))}
+            </div>
+          )}
+          {search.trim() && searchResults.length === 0 && (
+            <p className="mt-3 text-xs text-slate-500">No matching location found.</p>
+          )}
         </div>
 
         <div className="space-y-4">
@@ -212,4 +268,3 @@ export function LocationPlayground() {
     </div>
   );
 }
-

@@ -106,6 +106,14 @@ export function findLocation(query: string, types?: LocationSearchResult['type']
   return searchLocations({ query, types, limit: 1 })[0];
 }
 
+export async function searchLocationsAsync(options: SearchLocationsOptions): Promise<LocationSearchResult[]> {
+  return searchLocations(options);
+}
+
+export async function findLocationAsync(query: string, types?: LocationSearchResult['type'][]): Promise<LocationSearchResult | undefined> {
+  return findLocation(query, types);
+}
+
 export function getLocationTree(): LocationTree {
   const divisions = divisionsData.divisions as Division[];
   const districts = districtsData.districts as District[];
@@ -122,4 +130,8 @@ export function getLocationTree(): LocationTree {
       })),
     })),
   };
+}
+
+export async function getLocationTreeAsync(): Promise<LocationTree> {
+  return getLocationTree();
 }

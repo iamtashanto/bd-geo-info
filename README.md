@@ -466,15 +466,15 @@ const results = searchLocations({
 });
 ```
 
-Use `divisionId` or `districtId` for hierarchical filtering. `findLocation(query, types?)` returns the best single match, while `getLocationTree()` returns the complete nested hierarchy.
+Use `divisionId` or `districtId` for hierarchical filtering. `findLocation(query, types?)` returns the best single match, while `getLocationTree()` returns the complete nested hierarchy. Async counterparts are available as `searchLocationsAsync`, `findLocationAsync`, and `getLocationTreeAsync`.
 
 ### `validateAddress(data)`
 
-Validates location names and postcode format and returns `{ valid, errors }`.
+Validates location names and postcode format and returns `{ valid, errors }`. Use `validateAddressAsync(data)` when your application uses Promise-based service APIs.
 
 ### `distanceBetween(a, b)` and `findNearestLocation(coordinates, types?)`
 
-Calculate great-circle distance in kilometres or find the nearest division/district from latitude and longitude coordinates.
+Calculate great-circle distance in kilometres or find the nearest division/district from latitude and longitude coordinates. Promise variants are available as `distanceBetweenAsync` and `findNearestLocationAsync`.
 
 ### React search
 

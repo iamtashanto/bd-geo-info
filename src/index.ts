@@ -6,7 +6,21 @@ export { getDistricts as getDistrictsList } from './utils/getDistricts';
 export { default as getUpazilasList } from './utils/getUpazilas';
 export { getUnions as getUnionsList, getUnionsList as getUnionsSync } from './utils/getUnions';
 export { default as getPostCode } from './utils/getPostCode';
-export { findLocation, getLocationTree, normalizeLocationQuery, searchLocations, distanceBetween, findNearestLocation, validateAddress } from './utils';
+export {
+  findLocation,
+  findLocationAsync,
+  getLocationTree,
+  getLocationTreeAsync,
+  normalizeLocationQuery,
+  searchLocations,
+  searchLocationsAsync,
+  distanceBetween,
+  distanceBetweenAsync,
+  findNearestLocation,
+  findNearestLocationAsync,
+  validateAddress,
+  validateAddressAsync,
+} from './utils';
 
 // Core types (no React dependency)
 export type {

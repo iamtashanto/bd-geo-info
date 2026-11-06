@@ -1,6 +1,21 @@
 import { Division, District, Upazila, Union, PostCode, UnionData } from '../types';
-export { findLocation, getLocationTree, normalizeLocationQuery, searchLocations } from './searchLocations';
-export { distanceBetween, findNearestLocation, validateAddress } from './location';
+export {
+  findLocation,
+  findLocationAsync,
+  getLocationTree,
+  getLocationTreeAsync,
+  normalizeLocationQuery,
+  searchLocations,
+  searchLocationsAsync,
+} from './searchLocations';
+export {
+  distanceBetween,
+  distanceBetweenAsync,
+  findNearestLocation,
+  findNearestLocationAsync,
+  validateAddress,
+  validateAddressAsync,
+} from './location';
 
 export const getDivisions = async (language: 'en' | 'bn' = 'en'): Promise<{ value: string; label: string }[]> => {
   const divisions = (await import('../data/bd-divisions.json')).default.divisions;

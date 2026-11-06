@@ -35,6 +35,10 @@ export function validateAddress(data: AddressFormData): AddressValidationResult 
   return { valid: Object.keys(errors).length === 0, errors };
 }
 
+export async function validateAddressAsync(data: AddressFormData): Promise<AddressValidationResult> {
+  return validateAddress(data);
+}
+
 export function distanceBetween(a: Coordinates, b: Coordinates): number {
   const earthRadiusKm = 6371;
   const latitudeDelta = ((b.latitude - a.latitude) * Math.PI) / 180;
@@ -42,6 +46,10 @@ export function distanceBetween(a: Coordinates, b: Coordinates): number {
   const haversine = Math.sin(latitudeDelta / 2) ** 2
     + Math.cos((a.latitude * Math.PI) / 180) * Math.cos((b.latitude * Math.PI) / 180) * Math.sin(longitudeDelta / 2) ** 2;
   return earthRadiusKm * 2 * Math.atan2(Math.sqrt(haversine), Math.sqrt(1 - haversine));
+}
+
+export async function distanceBetweenAsync(a: Coordinates, b: Coordinates): Promise<number> {
+  return distanceBetween(a, b);
 }
 
 export function findNearestLocation(coordinates: Coordinates, types: Array<'division' | 'district'> = ['division', 'district']): LocationSearchResult | undefined {
@@ -53,4 +61,11 @@ export function findNearestLocation(coordinates: Coordinates, types: Array<'divi
     }));
   }).filter((item) => Number.isFinite(item.latitude) && Number.isFinite(item.longitude));
   return candidates.sort((a, b) => distanceBetween(coordinates, a) - distanceBetween(coordinates, b))[0];
+}
+
+export async function findNearestLocationAsync(
+  coordinates: Coordinates,
+  types: Array<'division' | 'district'> = ['division', 'district'],
+): Promise<LocationSearchResult | undefined> {
+  return findNearestLocation(coordinates, types);
 }

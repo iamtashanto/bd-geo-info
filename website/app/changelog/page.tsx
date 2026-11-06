@@ -8,6 +8,19 @@ export const metadata: Metadata = {
 
 const releases = [
   {
+    version: '5.2.0',
+    date: '2026-11',
+    badge: 'Latest',
+    badgeColor: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400',
+    changes: [
+      { type: 'feat', text: 'All-Bangladesh unified location search across divisions, districts, upazilas, unions and postcodes' },
+      { type: 'feat', text: 'Bilingual normalization, aliases, offline lookup and address hierarchy validation' },
+      { type: 'feat', text: 'React LocationSearch component and useLocationSearch hook' },
+      { type: 'feat', text: 'Consistent Promise-based counterparts for search, validation, tree and coordinate utilities' },
+      { type: 'docs', text: 'Added searchable playground, API documentation, SEO metadata and benchmark comparison' },
+    ],
+  },
+  {
     version: '5.1.0',
     date: '2026-10',
     badge: 'Latest',
@@ -81,7 +94,7 @@ export default function ChangelogPage() {
       <div className="mb-10">
         <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Changelog</h1>
         <p className="text-slate-600 dark:text-slate-400">
-          Release history for <code className="code-inline">bd-geo-info</code>. Package version: <strong>5.1.0</strong>.
+          Release history for <code className="code-inline">bd-geo-info</code>. Package version: <strong>5.2.0</strong>.
         </p>
       </div>
 
@@ -141,4 +154,3 @@ export default function ChangelogPage() {
     </div>
   );
 }
-

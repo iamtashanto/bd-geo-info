@@ -96,3 +96,17 @@ export type {
   LocationType,
   SearchLocationsOptions,
 } from './search';
+
+export type PlaceKind = 'VILLAGE' | 'TOWN' | 'MARKET' | 'ISLAND' | 'BEACH' | 'AREA';
+
+/** A village, town, bazaar, island, beach or well-known area that is not an administrative unit. */
+export interface Place {
+  name: string;
+  bn_name: string;
+  kind: PlaceKind;
+  latitude: number;
+  longitude: number;
+  district_id: string;
+  /** null for the few places the boundaries could not put in an upazila (some city areas). */
+  upazila_id: string | null;
+}

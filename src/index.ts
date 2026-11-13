@@ -6,6 +6,7 @@ export { getDistricts as getDistrictsList } from './utils/getDistricts';
 export { default as getUpazilasList } from './utils/getUpazilas';
 export { getUnions as getUnionsList, getUnionsList as getUnionsSync } from './utils/getUnions';
 export { default as getPostCode } from './utils/getPostCode';
+export { getPlaces } from './utils/getPlaces';
 export {
   findLocation,
   findLocationAsync,
@@ -36,6 +37,8 @@ export type {
   Theme,
   AddressValidationResult,
   Coordinates,
+  Place,
+  PlaceKind,
   LocationSearchResult,
   LocationTree,
   LocationType,

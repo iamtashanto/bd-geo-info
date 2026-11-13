@@ -1,6 +1,6 @@
 {
   "name": "bd-geo-info",
-  "version": "5.2.0",
+  "version": "5.3.0",
   "description": "Bangladesh geo address library — division, district, upazila (thana), union, village, postal code and BBS geocode lookup with Bangla/English names.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

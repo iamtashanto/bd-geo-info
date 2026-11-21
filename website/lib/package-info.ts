@@ -1,6 +1,6 @@
 export const packageInfo = {
   name: 'bd-geo-info',
-  version: '5.1.1',
+  version: '5.3.1',
   description:
     'Bangladesh geo address library — division, district, upazila (thana), union, village, postal code and BBS geocode lookup with Bangla/English names.',
   license: 'MIT',

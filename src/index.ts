@@ -1,12 +1,12 @@
 // Core utility functions (framework-agnostic)
-export { getDivisions, getDistricts, getUpazilas, getUnions, getPostCodes, formatAddress, validatePostCode } from './utils';
+export { getDivisions, getDistricts, getUpazilas, getUnions, getPostCodes, formatAddress, validatePostCode } from './utils/index.js';
 
 // Individual util exports for backwards compatibility
-export { getDistricts as getDistrictsList } from './utils/getDistricts';
-export { default as getUpazilasList } from './utils/getUpazilas';
-export { getUnions as getUnionsList, getUnionsList as getUnionsSync } from './utils/getUnions';
-export { default as getPostCode } from './utils/getPostCode';
-export { getPlaces } from './utils/getPlaces';
+export { getDistricts as getDistrictsList } from './utils/getDistricts.js';
+export { default as getUpazilasList } from './utils/getUpazilas.js';
+export { getUnions as getUnionsList, getUnionsList as getUnionsSync } from './utils/getUnions.js';
+export { default as getPostCode } from './utils/getPostCode.js';
+export { getPlaces } from './utils/getPlaces.js';
 export {
   findLocation,
   findLocationAsync,
@@ -21,7 +21,7 @@ export {
   findNearestLocationAsync,
   validateAddress,
   validateAddressAsync,
-} from './utils';
+} from './utils/index.js';
 
 // Core types (no React dependency)
 export type {
@@ -43,4 +43,4 @@ export type {
   LocationTree,
   LocationType,
   SearchLocationsOptions,
-} from './types';
+} from './types/index.js';

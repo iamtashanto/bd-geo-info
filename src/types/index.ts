@@ -95,7 +95,7 @@ export type {
   LocationTree,
   LocationType,
   SearchLocationsOptions,
-} from './search';
+} from './search.js';
 
 export type PlaceKind = 'VILLAGE' | 'TOWN' | 'MARKET' | 'ISLAND' | 'BEACH' | 'AREA';
 

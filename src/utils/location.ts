@@ -1,8 +1,8 @@
 import divisionsData from '../data/bd-divisions.json';
 import districtsData from '../data/bd-districts.json';
-import type { AddressFormData } from '../types';
-import type { AddressValidationResult, Coordinates, LocationSearchResult } from '../types/search';
-import { findLocation } from './searchLocations';
+import type { AddressFormData } from '../types/index.js';
+import type { AddressValidationResult, Coordinates, LocationSearchResult } from '../types/search.js';
+import { findLocation } from './searchLocations.js';
 
 export function validateAddress(data: AddressFormData): AddressValidationResult {
   const errors: AddressValidationResult['errors'] = {};

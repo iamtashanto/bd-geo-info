@@ -1,4 +1,4 @@
-import { Upazila } from '../types';
+import { Upazila } from '../types/index.js';
 import upazilasData from '../data/bd-upazilas.json';
 
 const upazilas = upazilasData as unknown as Record<string, Upazila[]>;

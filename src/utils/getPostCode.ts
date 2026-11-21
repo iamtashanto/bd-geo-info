@@ -1,4 +1,4 @@
-import { PostCode } from '../types';
+import { PostCode } from '../types/index.js';
 import postcodes from '../data/bd-postcodes.json';
 
 export default function getPostCode(params: {

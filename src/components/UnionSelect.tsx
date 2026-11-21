@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Upazila, UnionData } from '../types';
+import { Upazila, UnionData } from '../types/index.js';
 import type { ReactNode } from 'react';
-import { getUnions } from '../utils';
+import { getUnions } from '../utils/index.js';
 
 interface UnionSelectProps {
   upazila?: Upazila;

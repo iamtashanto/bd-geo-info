@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { AddressFormData, AddressFormValidation, Division, District, Upazila, UnionData } from "../types/index";
-import { AddressFormProps } from "../types/react";
-import DivisionSelect from './DivisionSelect';
-import DistrictSelect from './DistrictSelect';
-import UpazilaSelect from './UpazilaSelect';
-import UnionSelect from './UnionSelect';
-import getPostCode from '../utils/getPostCode';
+import { AddressFormData, AddressFormValidation, Division, District, Upazila, UnionData } from "../types/index.js";
+import { AddressFormProps } from "../types/react.js";
+import DivisionSelect from './DivisionSelect.js';
+import DistrictSelect from './DistrictSelect.js';
+import UpazilaSelect from './UpazilaSelect.js';
+import UnionSelect from './UnionSelect.js';
+import getPostCode from '../utils/getPostCode.js';
 
 export default function AddressForm({
   language = 'en',

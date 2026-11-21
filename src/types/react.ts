@@ -8,7 +8,7 @@ import type {
   PostCode,
   Theme,
   ValidationRules,
-} from './index';
+} from './index.js';
 
 export interface AddressFormErrors {
   division?: string | ReactNode;

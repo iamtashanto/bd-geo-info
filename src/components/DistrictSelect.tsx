@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { District, Division } from '../types/index';
-import { SelectProps } from '../types/react';
-import { getDistricts } from '../utils';
+import { District, Division } from '../types/index.js';
+import { SelectProps } from '../types/react.js';
+import { getDistricts } from '../utils/index.js';
 
 interface DistrictSelectProps extends SelectProps<District> {
   division?: Division;

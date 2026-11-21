@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { searchLocations } from '../utils/searchLocations';
-import type { LocationSearchResult, LocationType } from '../types/search';
+import { searchLocations } from '../utils/searchLocations.js';
+import type { LocationSearchResult, LocationType } from '../types/search.js';
 
 export interface LocationSearchProps {
   value?: string;

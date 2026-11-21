@@ -3,8 +3,8 @@ import districtsData from '../data/bd-districts.json';
 import upazilasData from '../data/bd-upazilas.json';
 import unionsData from '../data/unions.json';
 import postcodesData from '../data/bd-postcodes.json';
-import type { District, Division, PostCode, UnionData, Upazila } from '../types';
-import type { LocationSearchResult, LocationTree, SearchLocationsOptions } from '../types/search';
+import type { District, Division, PostCode, UnionData, Upazila } from '../types/index.js';
+import type { LocationSearchResult, LocationTree, SearchLocationsOptions } from '../types/search.js';
 
 const aliases: Record<string, string> = {
   barishal: 'barisal',

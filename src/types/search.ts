@@ -1,4 +1,4 @@
-import type { AddressFormData, District, Division, PostCode, UnionData, Upazila } from './index';
+import type { AddressFormData, District, Division, PostCode, UnionData, Upazila } from './index.js';
 
 export type LocationType = 'division' | 'district' | 'upazila' | 'union' | 'postcode';
 

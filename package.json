@@ -30,7 +30,7 @@
     "build:react:cjs": "tsc -p tsconfig.react.cjs.json",
     "build:react:esm": "tsc -p tsconfig.react.esm.json",
     "build:react:types": "tsc -p tsconfig.react.types.json",
-    "test": "jest",
+    "test": "jest && node tests/esm-cjs.test.mjs",
     "prepare": "node -e \"if(process.env.NODE_ENV!=='production'){try{require('child_process').execSync('npm run build',{stdio:'inherit'})}catch(e){}}\""
   },
   "keywords": [

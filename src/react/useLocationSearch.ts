@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
-import { searchLocations } from '../utils/searchLocations';
-import type { LocationSearchResult, SearchLocationsOptions } from '../types/search';
+import { searchLocations } from '../utils/searchLocations.js';
+import type { LocationSearchResult, SearchLocationsOptions } from '../types/search.js';
 
 export function useLocationSearch(options: SearchLocationsOptions): LocationSearchResult[] {
   const { query, types, divisionId, districtId, limit } = options;

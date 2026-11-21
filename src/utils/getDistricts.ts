@@ -1,4 +1,4 @@
-import { District } from '../types';
+import { District } from '../types/index.js';
 import districts from '../data/bd-districts.json';
 
 interface RawDistrict {

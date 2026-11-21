@@ -1,4 +1,4 @@
-import type { Place, PlaceKind } from '../types';
+import type { Place, PlaceKind } from '../types/index.js';
 import upazilasData from '../data/bd-upazilas.json';
 
 type Row = [string, string, string, number, number];

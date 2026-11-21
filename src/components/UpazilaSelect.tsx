@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { District, Upazila } from "../types/index";
+import { District, Upazila } from "../types/index.js";
 import type { ReactNode } from 'react';
-import { getUpazilas } from '../utils';
+import { getUpazilas } from '../utils/index.js';
 
 interface UpazilaSelectProps {
   district?: District;

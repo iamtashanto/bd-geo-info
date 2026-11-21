@@ -1,4 +1,4 @@
-import { Division, District, Upazila, Union, PostCode, UnionData } from '../types';
+import { Division, District, Upazila, Union, PostCode, UnionData } from '../types/index.js';
 export {
   findLocation,
   findLocationAsync,
@@ -7,7 +7,7 @@ export {
   normalizeLocationQuery,
   searchLocations,
   searchLocationsAsync,
-} from './searchLocations';
+} from './searchLocations.js';
 export {
   distanceBetween,
   distanceBetweenAsync,
@@ -15,7 +15,7 @@ export {
   findNearestLocationAsync,
   validateAddress,
   validateAddressAsync,
-} from './location';
+} from './location.js';
 
 export const getDivisions = async (language: 'en' | 'bn' = 'en'): Promise<{ value: string; label: string }[]> => {
   const divisions = (await import('../data/bd-divisions.json')).default.divisions;
@@ -69,8 +69,6 @@ export const getUnions = async (upazilaId: string, language: 'en' | 'bn' = 'en')
     url: unionData.url || ''
   }));
 };
-
-
 
 export const getPostCodes = async (districtId: string | null = null, upazila?: string): Promise<PostCode[]> => {
   if (!districtId) {
